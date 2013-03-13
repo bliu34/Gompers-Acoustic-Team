@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 public class GestureActivity extends Activity {
 	
+	
 	TextView gEvent;
 	
     /* Called when the activity is first created. */
