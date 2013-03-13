@@ -11,13 +11,7 @@ import android.widget.TextView;
 
 public class GestureActivity extends Activity {
 	
-<<<<<<< HEAD
-	
 	TextView gEvent;
-=======
-	TextView gestureEvent;
->>>>>>> 5d1d0d9b2565a44b2aaa723527fb4eb690c5678f
-	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

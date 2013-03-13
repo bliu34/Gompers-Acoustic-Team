@@ -3,10 +3,10 @@ package edu.asu.acousticsystem;
 public class Vertex {
 	  final private String id;
 	  final private String name;
-	  final private Point position;
+	  final private Area position;
 	  
 	  
-	  public Vertex(String id, String name, Point position) {
+	  public Vertex(String id, String name, Area position) {
 	    this.id = id;
 	    this.name = name;
 	    this.position = position;
@@ -16,9 +16,14 @@ public class Vertex {
 	    return id;
 	  }
 	  
-	  public Point getPosition()
+	  public Area getPosition()
 	  {
 		  return position;
+	  }
+	  
+	  public boolean inArea(Point position)
+	  {
+		  return this.position.isPointinArea(position);
 	  }
 
 	  public String getName() {
