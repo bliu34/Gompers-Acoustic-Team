@@ -11,7 +11,8 @@ import android.widget.TextView;
 
 public class GestureActivity extends Activity {
 	
-	TextView gEvent;
+	TextView gestureEvent;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,40 +26,37 @@ public class GestureActivity extends Activity {
     	return gestureDetector.onTouchEvent(event);
 	}
 
-	SimpleOnGestureListener simpleOnGestureListener
-    = new SimpleOnGestureListener(){
+	SimpleOnGestureListener simpleOnGestureListener = new SimpleOnGestureListener() {
 
-		@Override
-		public boolean onDoubleTap(MotionEvent e) {
-			// TODO Auto-generated method stub
-			gestureEvent.setText("Double Tap Detected: \n" + e.toString());
-			return super.onDoubleTap(e);
-		}
+	@Override
+	public boolean onDoubleTap(MotionEvent e) {
+	// TODO Auto-generated method stub
+		gestureEvent.setText("Double Tap Detected:");
+		return super.onDoubleTap(e);
+	}
 
-		@Override
-		public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
-				float velocityY) {
-			// TODO Auto-generated method stub
-			gestureEvent.setText("Swipe Detected: \n" + e1.toString() + "\n" + e2.toString() +"\n" );
-			return super.onFling(e1, e2, velocityX, velocityY);
-		}
+	@Override
+	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+	// TODO Auto-generated method stub
+		gestureEvent.setText("Swipe Detected:");
+		return super.onFling(e1, e2, velocityX, velocityY);
+	}
 
-		@Override
-		public void onLongPress(MotionEvent e) {
-			// TODO Auto-generated method stub
-			gestureEvent.setText("Long Press Detected: \n" + e.toString());
-			super.onLongPress(e);
-		}
+	@Override
+	public void onLongPress(MotionEvent e) {
+	// TODO Auto-generated method stub
+		gestureEvent.setText("Long Press Detected: ");
+		super.onLongPress(e);
+	}
 
-		@Override
-		public boolean onSingleTapConfirmed(MotionEvent e) {
-			// TODO Auto-generated method stub
-			gestureEvent.setText("Single Tap Detected: \n" + e.toString());
-			return super.onSingleTapConfirmed(e);
-		}
+	@Override
+	public boolean onSingleTapConfirmed(MotionEvent e) {
+	// TODO Auto-generated method stub
+		gestureEvent.setText("Single Tap Detected:");
+		return super.onSingleTapConfirmed(e);
+	}
 
-    };
+	};
     
-    GestureDetector gestureDetector
-    = new GestureDetector(simpleOnGestureListener);
+    GestureDetector gestureDetector = new GestureDetector(simpleOnGestureListener);
 }
