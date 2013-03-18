@@ -11,12 +11,12 @@ public class Signal {
 	
 	final WifiManager manager;
 	
-	Signal(Context myContext)
+	public Signal(Context myContext)
 	{
 		manager = (WifiManager)myContext.getSystemService(Context.WIFI_SERVICE);
 	}
 	
-	List<ScanResult> getWifiLevels()
+	public List<ScanResult> getWifiLevels()
 	{
 		manager.startScan();
 		return manager.getScanResults();

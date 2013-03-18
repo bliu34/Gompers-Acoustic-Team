@@ -12,18 +12,18 @@ public class DijkstraManager {
 	private int curSelectedVertex;
 	private ArrayList<Vertex> vertexes;
 
-	DijkstraManager(Graph graph) {
+	public DijkstraManager(Graph graph) {
 		myDa = new DijkstraAlgorithm(graph);
 		vertexes = (ArrayList<Vertex>) graph.getVertexes();
 	}
 
-	ArrayList<Vertex> generatePath() {
+	public ArrayList<Vertex> generatePath() {
 		myDa.execute(vertexes.get(latestUserVertex));
 		return new ArrayList<Vertex>(myDa.getPath(vertexes
 				.get(curSelectedVertex)));
 	}
 
-	void stepSelectedVertex() {
+	public void stepSelectedVertex() {
 		curSelectedVertex++;
 
 		if (curSelectedVertex == latestUserVertex)
@@ -35,23 +35,23 @@ public class DijkstraManager {
 		playSound(curSelectedVertex + 1);
 	}
 
-	void setLatestUserVertex(int latestVertex) {
+	public void setLatestUserVertex(int latestVertex) {
 		latestUserVertex = latestVertex;
 	}
 
-	int getSelectedVertex() {
+	public int getSelectedVertex() {
 		return curSelectedVertex;
 	}
 
-	int getUserVertex() {
+	public int getUserVertex() {
 		return latestUserVertex;
 	}
 
-	ArrayList<Vertex> getVertexesOnMap() {
+	public ArrayList<Vertex> getVertexesOnMap() {
 		return vertexes;
 	}
 
-	boolean changeUserPosition(Point position) {
+	public boolean changeUserPosition(Point position) {
 		boolean changed = false;
 		for (int i = 0; !changed && i < vertexes.size(); i++) {
 			if (vertexes.get(i).inArea(position)) {

@@ -7,48 +7,48 @@ public class Router {
 	private double routerLat;
 	private double routerLong;
 	
-	Router(String SSID)
+	public Router(String SSID)
 	{
 		this.SSID = SSID;
 		level = Integer.valueOf(0);
 	}
 	
-	void setLevel(Integer level)
+	public void setLevel(Integer level)
 	{
 		this.level = level;
 	}
 	
-	void setRouterLat(double routerLat)
+	public void setRouterLat(double routerLat)
 	{
 		this.routerLat = routerLat;
 	}
 	
-	void setRouterLong(double routerLong)
+	public void setRouterLong(double routerLong)
 	{
 		this.routerLong = routerLong;
 	}
 	
-	String getSSID()
+	public String getSSID()
 	{
 		return SSID;
 	}
 	
-	Integer getLevel()
+	public Integer getLevel()
 	{
 		return level;
 	}
 	
-	double getRouterLat()
+	public double getRouterLat()
 	{
 		return routerLat;
 	}
 	
-	double getRouterLong()
+	public double getRouterLong()
 	{
 		return routerLong;
 	}
 	
-	Boolean isSameRouter(String SSID)
+	public Boolean isSameRouter(String SSID)
 	{
 		return this.SSID.equals(SSID);
 	}

@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class RouterTrilateration {
 
-	Router router1 = new Router("Router1");
-	Router router2 = new Router("Router2");
-	Router router3 = new Router("Router3");
+	private Router router1 = new Router("Router1");
+	private Router router2 = new Router("Router2");
+	private Router router3 = new Router("Router3");
 	
 	static double calcDistance(double signal){
 		
