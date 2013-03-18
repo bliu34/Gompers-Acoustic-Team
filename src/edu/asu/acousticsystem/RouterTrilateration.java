@@ -1,4 +1,4 @@
-package edu.asu.acousticsystem.test;
+package edu.asu.acousticsystem;
 
 
 import java.util.ArrayList;
@@ -12,6 +12,10 @@ import java.util.ArrayList;
 
 public class RouterTrilateration {
 
+	Router router1 = new Router("Router1");
+	Router router2 = new Router("Router2");
+	Router router3 = new Router("Router3");
+	
 	static double calcDistance(double signal){
 		
 		double base = 10;
