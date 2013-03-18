@@ -8,6 +8,7 @@ import java.util.ArrayList;
 //Coordinates rewritten to match Gompers Vocational Center
 //Unnecessary programs deleted
 //Changed calculations slightly
+//Using Router objects with latitude and longitude coordinates hardcoded into them.
 //////////////////////////////////////////////////////////////////////////////////////////
 
 public class RouterTrilateration {
