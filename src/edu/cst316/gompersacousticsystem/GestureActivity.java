@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class GestureActivity extends Activity {
 	
 	TextView gestureEvent;
+	DijkstraManager myManager;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,28 +31,25 @@ public class GestureActivity extends Activity {
 	@Override
 	public boolean onDoubleTap(MotionEvent e) {
 	// TODO Auto-generated method stub
-		gestureEvent.setText("Double Tap Detected:");
-		return super.onDoubleTap(e);
+		return false;
 	}
 
 	@Override
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
 	// TODO Auto-generated method stub
-		gestureEvent.setText("Swipe Detected:");
+		myManager.generatePath();
 		return super.onFling(e1, e2, velocityX, velocityY);
 	}
 
 	@Override
 	public void onLongPress(MotionEvent e) {
 	// TODO Auto-generated method stub
-		gestureEvent.setText("Long Press Detected: ");
-		super.onLongPress(e);
 	}
 
 	@Override
 	public boolean onSingleTapConfirmed(MotionEvent e) {
 	// TODO Auto-generated method stub
-		gestureEvent.setText("Single Tap Detected:");
+		myManager.stepSelectedVertex();
 		return super.onSingleTapConfirmed(e);
 	}
 
