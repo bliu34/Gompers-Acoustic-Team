@@ -2,6 +2,7 @@ package edu.cst316.gompersacousticsystem;
 
 import edu.cst316.gompersacousticsystem.*;
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
@@ -12,10 +13,12 @@ public class GestureActivity extends Activity {
 	
 	TextView gestureEvent;
 	DijkstraManager myManager;
+	private static Context context;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        GestureActivity.context = getApplicationContext();
         setContentView(R.layout.main);
         gestureEvent = (TextView)findViewById(R.id.GestureEvent);
     }
@@ -53,7 +56,12 @@ public class GestureActivity extends Activity {
 		return super.onSingleTapConfirmed(e);
 	}
 
+
 	};
     
     GestureDetector gestureDetector = new GestureDetector(simpleOnGestureListener);
+
+	public static Context getContext() {
+		return GestureActivity.context;
+	}
 }
