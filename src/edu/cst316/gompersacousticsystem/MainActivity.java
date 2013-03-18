@@ -51,7 +51,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_main);
-
+		Intent gesture = new Intent(this, GestureActivity.class);
+		startActivity(gesture);
 		
 		//Auto generated shit. Most likely going to delete half of it...
 		/*
