@@ -1,4 +1,4 @@
-package edu.asu.acousticsystems;
+package edu.asu.acousticsystem;
 
 import edu.asu.acousticsystems.R;
 
