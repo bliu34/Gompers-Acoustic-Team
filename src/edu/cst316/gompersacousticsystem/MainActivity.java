@@ -1,7 +1,7 @@
-package edu.asu.acousticsystem;
+package edu.cst316.gompersacousticsystem;
 
-import edu.asu.acousticsystem.util.SystemUiHider;
 import edu.cst316.gompersacousticsystem.R;
+import edu.cst316.gompersacousticsystem.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

@@ -1,4 +1,4 @@
-package edu.asu.acousticsystem;
+package edu.cst316.gompersacousticsystem;
 
 public class Router {
 	
@@ -53,5 +53,5 @@ public class Router {
 		return this.SSID.equals(SSID);
 	}
 	
-
+}
 

@@ -1,7 +1,6 @@
-package edu.asu.acousticsystem;
+package edu.cst316.gompersacousticsystem;
 
-import edu.asu.acousticsystems.R;
-
+import edu.cst316.gompersacousticsystem.*;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.GestureDetector;

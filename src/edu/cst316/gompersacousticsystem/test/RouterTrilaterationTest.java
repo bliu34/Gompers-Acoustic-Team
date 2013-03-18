@@ -1,6 +1,6 @@
-package edu.asu.acousticsystem.test;
+package edu.cst316.gompersacousticsystem.test;
 
-import edu.asu.acousticsystem.test.RouterTrilateration;
+import edu.cst316.gompersacousticsystem.test.RouterTrilateration;
 import junit.framework.TestCase;
 
 public class RouterTrilaterationTest extends TestCase {

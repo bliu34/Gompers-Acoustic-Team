@@ -3,7 +3,7 @@
 // http://www.vogella.com/articles/JavaAlgorithmsDijkstra/article.html
 // written by Lars Vogel.
 
-package edu.asu.acousticsystem;
+package edu.cst316.gompersacousticsystem;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,9 +14,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import edu.asu.acousticsystem.Edge;
-import edu.asu.acousticsystem.Graph;
-import edu.asu.acousticsystem.Vertex;
+import edu.cst316.gompersacousticsystem.Edge;
+import edu.cst316.gompersacousticsystem.Graph;
+import edu.cst316.gompersacousticsystem.Vertex;
 
 public class DijkstraAlgorithm {
 
