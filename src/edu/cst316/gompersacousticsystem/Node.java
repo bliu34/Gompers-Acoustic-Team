@@ -2,8 +2,8 @@ package edu.cst316.gompersacousticsystem;
 
 public class Node {
 	
-	private float latitude;
-	private float longitude;
+	private double latitude;
+	private double longitude;
 	private String locationName;
 	
 	Node(String locationName){
@@ -11,22 +11,22 @@ public class Node {
 		this.locationName = locationName;
 	}
 	
-	void setLatitude(float latitude){
+	void setLatitude(double Lat){
 		
-		this.latitude = latitude;
+		latitude = Lat;
 	}
 	
-	void setLongitude(float longitude){
+	void setLongitude(double Long){
 		
-		this.longitude = longitude;
+		longitude = Long;
 	}
 	
-	float getLatitude(){
+	double getLatitude(){
 		
 		return latitude;
 	}
 	
-	float getLongitude(){
+	double getLongitude(){
 		
 		return longitude;
 	}
