@@ -1,10 +1,10 @@
 package edu.cst316.gompersacousticsystem;
 
 public class Area {
-	Point bottomLeft;
-	Point topRight;
+	private Point bottomLeft;
+	private Point topRight;
 	
-	Area(Point bottomLeft, Point topRight){
+	public Area(Point bottomLeft, Point topRight){
 		this.bottomLeft = bottomLeft;
 		this.topRight = topRight;
 	}
