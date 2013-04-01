@@ -13,6 +13,6 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/floorplan720x931" />
+        android:src="@drawable/floorplan_edited" />
 
 </LinearLayout>
