@@ -8,6 +8,8 @@ import android.content.Context;
 import android.net.wifi.ScanResult;
 import android.os.Bundle;
 import android.view.GestureDetector;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
 import android.widget.TextView;
@@ -20,6 +22,10 @@ public class GestureActivity extends Activity {
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
+    	//Full Screen mode, comment out if you want the bar back
+    	requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //End Full Screen
         super.onCreate(savedInstanceState);
         GestureActivity.context = getApplicationContext();
         setContentView(R.layout.main);
