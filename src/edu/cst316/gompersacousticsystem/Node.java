@@ -6,7 +6,7 @@ public class Node {
 	private double longitude;
 	private String locationName;
 	
-	Node(String locationName){
+	public Node(String locationName){
 		
 		this.locationName = locationName;
 	}

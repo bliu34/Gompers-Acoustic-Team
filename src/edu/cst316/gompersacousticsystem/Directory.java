@@ -3,87 +3,87 @@ package edu.cst316.gompersacousticsystem;
 import edu.cst316.gompersacousticsystem.Node;
 
 public class Directory {
-	
+
 	Node officeNode = new Node("CaseManagerOffices");
 	Node restroomNode = new Node("Restrooms");
 	Node cafeteriaNode = new Node("Cafeteria");
 	Node homeNode = new Node("HomeSeat");
 	Node frontNode = new Node("FrontDoors");
-	
-	
-	double officeLat = 33.346534;
-	double officeLong = -112.116128;
-	//officeNode.setLatitude(officeLat);
-	//officeNode.setLongitude(officeLong);
-	
-	double restLat = 33.346534;
-	double restLong = -112.116128;
-	//restroomNode.setLatitude(restLat);
-	//restroomNode.setLongitude(restLong);
-	
-	double cafeteriaLat = 33.346534;
-	double cafeteriaLong = -112.116128;
-	//cafeteriaNode.setLatitude(cafeteriaLat);
-	//cafeteriaNode.setLongitude(cafeteriaLong);
-	
-	double homeLat = 33.346534;
-	double homeLong = -112.116128;
-	//homeNode.setLatitude(homeLat);
-	//homdNode.setLongitude(homeLong);
-	
-	double frontLat = 33.346534;
-	double frontLong = -112.116128;
-	//frontNode.setLatitude(frontLat);
-	//frontNode.setLongitude(frontLat);
-	
-	
-	double getCaseManagerLat(){
-		
+
+	public Directory() {
+		double officeLat = 33.346534;
+		double officeLong = -112.116128;
+		officeNode.setLatitude(officeLat);
+		officeNode.setLongitude(officeLong);
+
+		double restLat = 33.346534;
+		double restLong = -112.116128;
+		restroomNode.setLatitude(restLat);
+		restroomNode.setLongitude(restLong);
+
+		double cafeteriaLat = 33.346534;
+		double cafeteriaLong = -112.116128;
+		cafeteriaNode.setLatitude(cafeteriaLat);
+		cafeteriaNode.setLongitude(cafeteriaLong);
+
+		double homeLat = 33.346534;
+		double homeLong = -112.116128;
+		homeNode.setLatitude(homeLat);
+		homeNode.setLongitude(homeLong);
+
+		double frontLat = 33.346534;
+		double frontLong = -112.116128;
+		frontNode.setLatitude(frontLat);
+		frontNode.setLongitude(frontLat);
+	}
+
+	double getCaseManagerLat() {
+
 		return officeNode.getLatitude();
 	}
-	
-	double getCaseManagerLong(){
-		
+
+	double getCaseManagerLong() {
+
 		return officeNode.getLongitude();
 	}
-	
-	double getRestroomLat(){
-		
+
+	double getRestroomLat() {
+
 		return restroomNode.getLatitude();
 	}
-	
-	double getRestroomLong(){
-		
+
+	double getRestroomLong() {
+
 		return restroomNode.getLongitude();
-	}	
-	
-	double getCafeteriaLat(){
-		
+	}
+
+	double getCafeteriaLat() {
+
 		return cafeteriaNode.getLatitude();
 	}
 
-	double getCafeteriaLong(){
-		
+	double getCafeteriaLong() {
+
 		return cafeteriaNode.getLongitude();
 	}
-	
-	double getHomeLat(){
-		
+
+	double getHomeLat() {
+
 		return homeNode.getLatitude();
 	}
-	
-	double getHomeLong(){
-		
+
+	double getHomeLong() {
+
 		return homeNode.getLongitude();
 	}
-	
-	double getFrontLat(){
-		
+
+	double getFrontLat() {
+
 		return frontNode.getLatitude();
 	}
-	
-	double getFrontLong(){
-		
+
+	double getFrontLong() {
+
 		return frontNode.getLongitude();
 	}
 }
