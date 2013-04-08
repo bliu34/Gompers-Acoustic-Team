@@ -7,12 +7,8 @@
     <TextView
         android:id="@+id/GestureEvent" 
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="fill_parent" 
+        android:background='@drawable/floorplan_simple'/>
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/floorplan_simple" />
 
 </LinearLayout>
