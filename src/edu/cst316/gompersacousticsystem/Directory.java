@@ -37,52 +37,52 @@ public class Directory {
 		frontNode.setLongitude(frontLat);
 	}
 
-	double getCaseManagerLat() {
+	public double getCaseManagerLat() {
 
 		return officeNode.getLatitude();
 	}
 
-	double getCaseManagerLong() {
+	public double getCaseManagerLong() {
 
 		return officeNode.getLongitude();
 	}
 
-	double getRestroomLat() {
+	public double getRestroomLat() {
 
 		return restroomNode.getLatitude();
 	}
 
-	double getRestroomLong() {
+	public double getRestroomLong() {
 
 		return restroomNode.getLongitude();
 	}
 
-	double getCafeteriaLat() {
+	public double getCafeteriaLat() {
 
 		return cafeteriaNode.getLatitude();
 	}
 
-	double getCafeteriaLong() {
+	public double getCafeteriaLong() {
 
 		return cafeteriaNode.getLongitude();
 	}
 
-	double getHomeLat() {
+	public double getHomeLat() {
 
 		return homeNode.getLatitude();
 	}
 
-	double getHomeLong() {
+	public double getHomeLong() {
 
 		return homeNode.getLongitude();
 	}
 
-	double getFrontLat() {
+	public double getFrontLat() {
 
 		return frontNode.getLatitude();
 	}
 
-	double getFrontLong() {
+	public double getFrontLong() {
 
 		return frontNode.getLongitude();
 	}

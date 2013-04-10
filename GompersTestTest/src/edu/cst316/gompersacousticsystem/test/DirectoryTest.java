@@ -1,5 +1,6 @@
 package edu.cst316.gompersacousticsystem.test;
 
+import edu.cst316.gompersacousticsystem.Directory;
 import junit.framework.TestCase;
 
 public class DirectoryTest extends TestCase {

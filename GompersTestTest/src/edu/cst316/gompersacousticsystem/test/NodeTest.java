@@ -1,7 +1,7 @@
 package edu.cst316.gompersacousticsystem.test;
 
 import junit.framework.TestCase;
-import edu.cst316.gompersacousticsystem.test.Node;
+import edu.cst316.gompersacousticsystem.Node;
 
 
 public class NodeTest extends TestCase {

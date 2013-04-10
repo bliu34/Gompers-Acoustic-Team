@@ -1,11 +1,11 @@
 package edu.cst316.gompersacousticsystem.test;
 
-import edu.cst316.gompersacousticsystem.test.RouterTrilateration;
 import junit.framework.TestCase;
+import edu.cst316.gompersacousticsystem.RouterTrilateration;
 
 public class RouterTrilaterationTest extends TestCase {
 
-	public void testMyTrilateration() {
+	public void testTrilateration() {
 		
 		RouterTrilateration trilateration = new RouterTrilateration();
 		

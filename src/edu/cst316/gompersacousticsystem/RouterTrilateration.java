@@ -88,7 +88,7 @@ public class RouterTrilateration {
 			 return myLocation;
 		 }
 		 
-		 static double[] MyTrilateration(double Lat1, double Long1, double signal1, 
+		 public static double[] MyTrilateration(double Lat1, double Long1, double signal1, 
 					                     double Lat2, double Long2, double signal2,
 					                     double Lat3, double Long3, double signal3) {
 			 

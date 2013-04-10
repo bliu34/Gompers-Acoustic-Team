@@ -11,27 +11,27 @@ public class Node {
 		this.locationName = locationName;
 	}
 	
-	void setLatitude(double Lat){
+	public void setLatitude(double Lat){
 		
 		latitude = Lat;
 	}
 	
-	void setLongitude(double Long){
+	public void setLongitude(double Long){
 		
 		longitude = Long;
 	}
 	
-	double getLatitude(){
+	public double getLatitude(){
 		
 		return latitude;
 	}
 	
-	double getLongitude(){
+	public double getLongitude(){
 		
 		return longitude;
 	}
 	
-	String getLocationName(){
+	public String getLocationName(){
 		
 		return locationName;
 	}
