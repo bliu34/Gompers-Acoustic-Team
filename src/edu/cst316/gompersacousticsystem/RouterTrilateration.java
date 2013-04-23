@@ -13,9 +13,19 @@ import java.util.ArrayList;
 
 public class RouterTrilateration {
 
-	private Router router1 = new Router("Router1");
-	private Router router2 = new Router("Router2");
-	private Router router3 = new Router("Router3");
+	private static Router router1 = new Router("myqwest3331");
+	private static Router router2 = new Router("dlink");
+	private static Router router3 = new Router("belkin-router");
+	
+	public static void setLocation(){
+		router1.setRouterLat(33.524437);
+		router2.setRouterLat(33.524344);
+		router3.setRouterLat(33.524347);
+		
+		router1.setRouterLong(-112.173313);
+		router2.setRouterLong(-112.173544);
+		router3.setRouterLong(-112.172918);
+		}
 	
 	static double calcDistance(double signal){
 		
@@ -88,11 +98,14 @@ public class RouterTrilateration {
 			 return myLocation;
 		 }
 		 
-		 public static double[] MyTrilateration(double Lat1, double Long1, double signal1, 
-					                     double Lat2, double Long2, double signal2,
-					                     double Lat3, double Long3, double signal3) {
+		// public static double[] MyTrilateration(double Lat1, double Long1, double signal1, 
+			//		                     double Lat2, double Long2, double signal2,
+				//	                     double Lat3, double Long3, double signal3) {
 			 
+		   public static double[] MyTrilateration(){
 			 //ArrayList<Double> tmpWAP1, tmpWAP2, tmpWAP3;
+			 
+			   
 			 
 			 //Technical Standard used for accessing info through the internet.
 			 //Temporary array for storing coordinates for actual user location
@@ -109,15 +122,24 @@ public class RouterTrilateration {
 			 double[] MyLocation = new double[2];
 			 
 			 
-			 dist1 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal1)));
-			 dist2 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal2)));
-			 dist3 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal3)));
+			//dist1 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal1)));
+			//dist2 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal2)));
+			//dist3 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal3)));
 			 
-			 		 
-			 tmpLat2  = Lat2 - Lat1;
-			 tmpLong2 = Long2 - Long1;
-			 tmpLat3  = Lat3 - Lat1;
-			 tmpLong3 = Long3 - Long1;
+			 dist1 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router1.getLevel())));
+			 dist2 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router2.getLevel())));
+			 dist3 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router3.getLevel())));
+			 
+			 	
+			 tmpLat2 = router2.getRouterLat() - router1.getRouterLat();
+			 tmpLong2 = router2.getRouterLong() - router1.getRouterLong();
+			 tmpLat3 = router3.getRouterLat() - router1.getRouterLat();
+			 tmpLong3 = router3.getRouterLong() - router1.getRouterLong();
+			 
+			 //tmpLat2  = Lat2 - Lat1;
+			 //tmpLong2 = Long2 - Long1;
+			 //tmpLat3  = Lat3 - Lat1;
+			 //tmpLong3 = Long3 - Long1;
 			 
 			 tmpSlide = Math.sqrt(Math.pow(tmpLat2,2)+Math.pow(tmpLong2,2));
 			 
@@ -157,10 +179,16 @@ public class RouterTrilateration {
 			 
 			 MyLocation = myRotation(MyLat, MyLong, 0, -deg);
 			 
-			 MyLocation[0] = MyLocation[0] + Lat1;
-			 MyLocation[1] = MyLocation[1] + Long1; 
+			 MyLocation[0] = MyLocation[0] + router1.getRouterLat();  //Lat1;
+			 MyLocation[1] = MyLocation[1] + router1.getRouterLong(); //Long1; 
+			 
+			 for (int i=0;i<1;i++){
+				 
+				 System.out.println(MyLocation[i]);
+			 }
 			 
 			 return MyLocation;
+			 
 		 }
-	
 }
+

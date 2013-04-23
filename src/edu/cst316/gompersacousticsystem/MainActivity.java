@@ -1,5 +1,7 @@
 package edu.cst316.gompersacousticsystem;
 
+import edu.cst316.gompersacousticsystem.RouterTrilateration;
+
 import edu.cst316.gompersacousticsystem.R;
 import edu.cst316.gompersacousticsystem.util.SystemUiHider;
 
@@ -54,6 +56,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		Intent gesture = new Intent(this, GestureActivity.class);
 		startActivity(gesture);
+		RouterTrilateration.setLocation();
+		
 		
 		//Auto generated shit. Most likely going to delete half of it...
 		/*
@@ -147,6 +151,7 @@ public class MainActivity extends Activity {
 			if (AUTO_HIDE) {
 				delayedHide(AUTO_HIDE_DELAY_MILLIS);
 			}
+			RouterTrilateration.MyTrilateration();
 			return false;
 		}
 	};

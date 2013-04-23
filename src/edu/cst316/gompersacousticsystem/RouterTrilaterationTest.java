@@ -10,21 +10,21 @@ public class RouterTrilaterationTest extends TestCase {
 		
 		RouterTrilateration trilateration = new RouterTrilateration();
 		
-		Router router1 = new Router("Router1");
-		Router router2 = new Router("Router2");
-		Router router3 = new Router("Router3");
+		Router router1 = new Router("myqwest3331");
+		Router router2 = new Router("dlink");
+		Router router3 = new Router("belkin-router");
 		
 		router1.setLevel(-10);
 		router2.setLevel(-15);
 		router3.setLevel(-20);
 		
-		router1.setRouterLat(33.533604);
-		router2.setRouterLat(33.533568);
-		router3.setRouterLat(33.533568);
+		router1.setRouterLat(33.524437);
+		router2.setRouterLat(33.524344);
+		router3.setRouterLat(33.524347);
 		
-		router1.setRouterLong(-112.116128);
-		router2.setRouterLong(-112.115859);
-		router3.setRouterLong(-112.115591);
+		router1.setRouterLong(-112.173313);
+		router2.setRouterLong(-112.173544);
+		router3.setRouterLong(-112.172918);
 		
 		/*double signal1 = -10; //Typical maximum received signal power (-10 to -30) of wireless network
 		double signal2 = -15;
@@ -39,9 +39,7 @@ public class RouterTrilaterationTest extends TestCase {
 		double long3 = -112.115591;
 		*/
 		
-		double[] Mylocation = RouterTrilateration.MyTrilateration(router1.getRouterLat(), router1.getRouterLong(), router1.getLevel(),
-									  							  router2.getRouterLat(), router2.getRouterLong(), router2.getLevel(),
-									  							  router3.getRouterLat(), router3.getRouterLong(), router3.getLevel());
+		double[] Mylocation = RouterTrilateration.MyTrilateration();
 		
 		assertEquals(Mylocation.length, 3);
 		

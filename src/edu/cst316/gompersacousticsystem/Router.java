@@ -1,8 +1,14 @@
 package edu.cst316.gompersacousticsystem;
 
+import java.util.List;
+
+import android.net.wifi.ScanResult;
+
 public class Router {
 	
 	private String SSID;
+	private Signal signalStrength;
+	List<ScanResult> results;
 	private Integer level;
 	private double routerLat;
 	private double routerLong;
@@ -10,7 +16,9 @@ public class Router {
 	public Router(String SSID)
 	{
 		this.SSID = SSID;
-		level = Integer.valueOf(0);
+		//level = Integer.valueOf(0);
+		results = signalStrength.getWifiLevels();
+		level = Integer.valueOf(results.get(results.indexOf(SSID)).level);
 	}
 	
 	public void setLevel(Integer level)

@@ -92,7 +92,8 @@ public class GestureActivity extends Activity {
 		while(true)
 		{
 			scanResulsts = (ArrayList<ScanResult>)ourSignal.getWifiLevels();
-			giveMeThat = RouterTrilateration.MyTrilateration(0.0,0.0, (double)scanResulsts.get(0).level, 10.0, 20.0, (double)scanResulsts.get(1).level, 20.0, 0.0, (double)scanResulsts.get(2).level);
+			//giveMeThat = RouterTrilateration.MyTrilateration(0.0,0.0, (double)scanResulsts.get(0).level, 10.0, 20.0, (double)scanResulsts.get(1).level, 20.0, 0.0, (double)scanResulsts.get(2).level);
+			giveMeThat = RouterTrilateration.MyTrilateration();
 			currentPoint = new Point(giveMeThat[1], giveMeThat[2]);
 			myManager.changeUserPosition(currentPoint);
 			
