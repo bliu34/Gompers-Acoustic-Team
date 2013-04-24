@@ -16,9 +16,14 @@ public class Router {
 	public Router(String SSID)
 	{
 		this.SSID = SSID;
+		try {
 		//level = Integer.valueOf(0);
 		results = signalStrength.getWifiLevels();
 		level = Integer.valueOf(results.get(results.indexOf(SSID)).level);
+		}
+		catch (NullPointerException e){
+			e.printStackTrace();
+		}
 	}
 	
 	public void setLevel(Integer level)

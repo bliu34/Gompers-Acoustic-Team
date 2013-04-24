@@ -18,7 +18,7 @@ public class RouteLine{
 		halfWidth = 0.5;
 	}
 	
-	RouteLine( double x1, double y1, double x2, double y2, double halfWidth)
+	public RouteLine( double x1, double y1, double x2, double y2, double halfWidth)
 	{
 		if(x1 == x2)
 		{
@@ -38,7 +38,7 @@ public class RouteLine{
 			throw new IllegalArgumentException("Route is neither horizontal or vertical");
 	}
 	
-	RouteLine( Point start, Point end, double halfWidth)
+	public RouteLine( Point start, Point end, double halfWidth)
 	{
 		if(start.getX() == end.getX())
 		{

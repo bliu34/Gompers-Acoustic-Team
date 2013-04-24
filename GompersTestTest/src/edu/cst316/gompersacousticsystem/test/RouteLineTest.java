@@ -2,6 +2,7 @@ package edu.asu.acousticsystem;
 
 import static org.junit.Assert.*;
 import junit.framework.TestCase;
+import edu.cst316.gompersacousticsystem.Point;
 import edu.cst316.gompersacousticsystem.RouteLine;
 
 import org.junit.Before;

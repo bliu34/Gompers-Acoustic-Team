@@ -7,9 +7,6 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="16" />
-    
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-	<uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -27,12 +24,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <activity
-            android:name="edu.cst316.gompersacousticsystem.GestureActivity"
-            >
+        <activity android:name="edu.cst316.gompersacousticsystem.GestureActivity" >
         </activity>
-        
     </application>
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

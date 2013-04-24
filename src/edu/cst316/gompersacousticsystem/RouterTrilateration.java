@@ -16,7 +16,7 @@ public class RouterTrilateration {
 	private static Router router1 = new Router("myqwest3331");
 	private static Router router2 = new Router("dlink");
 	private static Router router3 = new Router("belkin-router");
-	
+
 	public static void setLocation(){
 		router1.setRouterLat(33.524437);
 		router2.setRouterLat(33.524344);
@@ -26,6 +26,8 @@ public class RouterTrilateration {
 		router2.setRouterLong(-112.173544);
 		router3.setRouterLong(-112.172918);
 		}
+	
+	
 	
 	static double calcDistance(double signal){
 		
