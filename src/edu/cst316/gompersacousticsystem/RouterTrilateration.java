@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class RouterTrilateration {
 
-	private static Router router1 = new Router("myqwest3331");
-	private static Router router2 = new Router("dlink");
-	private static Router router3 = new Router("belkin-router");
+	private static Router router1 = new Router("Smith");
+	private static Router router2 = new Router("NETGEAR94");
+	private static Router router3 = new Router("myqwest2158");
 
 	public static void setLocation(){
 		router1.setRouterLat(33.524437);
@@ -128,6 +128,9 @@ public class RouterTrilateration {
 			//dist2 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal2)));
 			//dist3 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal3)));
 			 
+			 router1.update();
+			 router2.update();
+			 router3.update();
 			 dist1 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router1.getLevel())));
 			 dist2 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router2.getLevel())));
 			 dist3 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router3.getLevel())));
