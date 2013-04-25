@@ -3,6 +3,7 @@ package edu.cst316.gompersacousticsystem;
 import java.util.ArrayList;
 
 import edu.cst316.gompersacousticsystem.*;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.net.wifi.ScanResult;
@@ -19,6 +20,7 @@ public class GestureActivity extends Activity {
 	TextView gestureEvent;
 	DijkstraManager myManager;
 	private static Context context;
+	RouterTrilateration rt;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,6 +78,7 @@ public class GestureActivity extends Activity {
 	// TODO Auto-generated method stub
 	}
 
+	@SuppressLint("NewApi")
 	@Override
 	public boolean onSingleTapConfirmed(MotionEvent e) {
 	// TODO Auto-generated method stub
@@ -87,13 +90,13 @@ public class GestureActivity extends Activity {
 	{
 		Point currentPoint;
 		double[] giveMeThat = new double[3];
-		Signal ourSignal = new Signal(context);
+		Signal ourSignal = new Signal(GestureActivity.getContext());
 		ArrayList<ScanResult> scanResulsts;
 		while(true)
 		{
 			scanResulsts = (ArrayList<ScanResult>)ourSignal.getWifiLevels();
 			//giveMeThat = RouterTrilateration.MyTrilateration(0.0,0.0, (double)scanResulsts.get(0).level, 10.0, 20.0, (double)scanResulsts.get(1).level, 20.0, 0.0, (double)scanResulsts.get(2).level);
-			giveMeThat = RouterTrilateration.MyTrilateration();
+			giveMeThat = rt.MyTrilateration();
 			currentPoint = new Point(giveMeThat[1], giveMeThat[2]);
 			myManager.changeUserPosition(currentPoint);
 			

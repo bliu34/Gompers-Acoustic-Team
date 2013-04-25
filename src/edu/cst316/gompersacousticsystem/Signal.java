@@ -13,7 +13,6 @@ public class Signal {
 	
 	public Signal(Context myContext)
 	{
-		
 		manager = (WifiManager)myContext.getSystemService(Context.WIFI_SERVICE);
 	}
 	

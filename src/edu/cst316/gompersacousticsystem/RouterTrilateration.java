@@ -13,10 +13,22 @@ import java.util.ArrayList;
 
 public class RouterTrilateration {
 
-	private static Router router1 = new Router("Smith");
-	private static Router router2 = new Router("NETGEAR94");
-	private static Router router3 = new Router("myqwest2158");
+	private static Router router1;// = new Router("Smith");
+	private static Router router2;// = new Router("NETGEAR94");
+	private static Router router3;// = new Router("myqwest2158");
 
+	public RouterTrilateration(){
+		router1 = new Router("Smith");
+		router2 = new Router("NETGEAR94");
+		router3 = new Router("myqwest2158");
+		router1.setRouterLat(33.524437);
+		router2.setRouterLat(33.524344);
+		router3.setRouterLat(33.524347);
+		
+		router1.setRouterLong(-112.173313);
+		router2.setRouterLong(-112.173544);
+		router3.setRouterLong(-112.172918);
+	}
 	public static void setLocation(){
 		router1.setRouterLat(33.524437);
 		router2.setRouterLat(33.524344);
@@ -27,7 +39,11 @@ public class RouterTrilateration {
 		router3.setRouterLong(-112.172918);
 		}
 	
-	
+	public void updateRouters(){
+		router1.update();
+		router2.update();
+		router3.update();
+	}
 	
 	static double calcDistance(double signal){
 		
