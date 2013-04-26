@@ -3,6 +3,7 @@ package edu.cst316.gompersacousticsystem;
 import java.util.List;
 
 import android.net.wifi.ScanResult;
+import android.widget.Toast;
 
 public class Router {
 
@@ -19,10 +20,14 @@ public class Router {
 		try {
 			// level = Integer.valueOf(0);
 			results = signalStrength.getWifiLevels();
-			level = Integer.valueOf(results.get(results.indexOf(SSID)).level);
+			level = Integer.valueOf((results.get(results.indexOf(SSID)).level));
 		} catch (NullPointerException e) {
 			e.printStackTrace();
+		} catch (ArrayIndexOutOfBoundsException e){
+			Toast toast = Toast.makeText(GestureActivity.getContext(), SSID + " is not working.", Toast.LENGTH_SHORT);
+			toast.show();
 		}
+		
 	}
 	
 	public void update(){

@@ -13,14 +13,15 @@ import java.util.ArrayList;
 
 public class RouterTrilateration {
 
-	private static Router router1;// = new Router("Smith");
-	private static Router router2;// = new Router("NETGEAR94");
-	private static Router router3;// = new Router("myqwest2158");
+	private static Router router1;
+	private static Router router2;
+	private static Router router3;
 
-	public RouterTrilateration(){
-		router1 = new Router("Smith");
-		router2 = new Router("NETGEAR94");
-		router3 = new Router("myqwest2158");
+	public RouterTrilateration(Router r1, Router r2, Router r3){
+		router1 = r1;
+		router2 = r2;
+		router3 = r3; 
+				
 		router1.setRouterLat(33.524437);
 		router2.setRouterLat(33.524344);
 		router3.setRouterLat(33.524347);
