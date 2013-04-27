@@ -51,9 +51,9 @@ public class GestureActivity extends Activity {
         Graph darn = new Graph(oh, ah);
         myManager = new DijkstraManager(darn);
         
-        Router r1 = new Router("Duck");
-        Router r2 = new Router("My Internet Bitches");
-        Router r3 = new Router("Duck");
+        Router r1 = new Router("dlink");
+        Router r2 = new Router("myqwest3331");
+        Router r3 = new Router("belkin-router");
         new RouterTrilateration(r1, r2, r3);
         RouterTrilateration.setLocation();
     }
