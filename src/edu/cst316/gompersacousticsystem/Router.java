@@ -14,9 +14,9 @@ public class Router {
 	private double routerLat;
 	private double routerLong;
 
-	public Router(String SSID) {
+	public Router(String SSID, Signal signalStrength) {
 		this.SSID = SSID;
-		Signal signalStrength = new Signal(GestureActivity.getContext());
+		//Signal signalStrength = new Signal(GestureActivity.getContext());
 		try {
 			// level = Integer.valueOf(0);
 			results = signalStrength.getWifiLevels();

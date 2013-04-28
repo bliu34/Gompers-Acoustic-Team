@@ -51,9 +51,10 @@ public class GestureActivity extends Activity {
         Graph darn = new Graph(oh, ah);
         myManager = new DijkstraManager(darn);
         
-        Router r1 = new Router("dlink");
-        Router r2 = new Router("myqwest3331");
-        Router r3 = new Router("belkin-router");
+        Signal signalStrength = new Signal(getContext());
+        Router r1 = new Router("dlink", signalStrength);
+        Router r2 = new Router("myqwest3331", signalStrength);
+        Router r3 = new Router("belkin-router", signalStrength);
         new RouterTrilateration(r1, r2, r3);
         RouterTrilateration.setLocation();
     }
