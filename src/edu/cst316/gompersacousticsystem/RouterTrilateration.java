@@ -13,10 +13,23 @@ import java.util.ArrayList;
 
 public class RouterTrilateration {
 
-	private static Router router1 = new Router("myqwest3331");
-	private static Router router2 = new Router("dlink");
-	private static Router router3 = new Router("belkin-router");
+	private static Router router1;
+	private static Router router2;
+	private static Router router3;
 
+	public RouterTrilateration(Router r1, Router r2, Router r3){
+		router1 = r1;
+		router2 = r2;
+		router3 = r3; 
+				
+		router1.setRouterLat(33.524437);
+		router2.setRouterLat(33.524344);
+		router3.setRouterLat(33.524347);
+		
+		router1.setRouterLong(-112.173313);
+		router2.setRouterLong(-112.173544);
+		router3.setRouterLong(-112.172918);
+	}
 	public static void setLocation(){
 		router1.setRouterLat(33.524437);
 		router2.setRouterLat(33.524344);
@@ -27,7 +40,11 @@ public class RouterTrilateration {
 		router3.setRouterLong(-112.172918);
 		}
 	
-	
+	public void updateRouters(){
+		router1.update();
+		router2.update();
+		router3.update();
+	}
 	
 	static double calcDistance(double signal){
 		
@@ -128,6 +145,9 @@ public class RouterTrilateration {
 			//dist2 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal2)));
 			//dist3 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal3)));
 			 
+			 router1.update();
+			 router2.update();
+			 router3.update();
 			 dist1 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router1.getLevel())));
 			 dist2 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router2.getLevel())));
 			 dist3 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router3.getLevel())));

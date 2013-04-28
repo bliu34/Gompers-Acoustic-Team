@@ -19,8 +19,7 @@ public class DijkstraManager {
 
 	public ArrayList<Vertex> generatePath() {
 		myDa.execute(vertexes.get(latestUserVertex));
-		return new ArrayList<Vertex>(myDa.getPath(vertexes
-				.get(curSelectedVertex)));
+		return new ArrayList<Vertex>(myDa.getPath(vertexes.get(curSelectedVertex)));
 	}
 
 	public void stepSelectedVertex() {

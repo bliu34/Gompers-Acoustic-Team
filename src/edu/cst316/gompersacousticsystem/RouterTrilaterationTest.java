@@ -8,12 +8,12 @@ public class RouterTrilaterationTest extends TestCase {
 
 	public void testMyTrilateration() {
 		
-		RouterTrilateration trilateration = new RouterTrilateration();
-		
 		Router router1 = new Router("myqwest3331");
 		Router router2 = new Router("dlink");
 		Router router3 = new Router("belkin-router");
-		
+		RouterTrilateration trilateration = new RouterTrilateration(router1, router2, router3);
+	
+
 		router1.setLevel(-10);
 		router2.setLevel(-15);
 		router3.setLevel(-20);
