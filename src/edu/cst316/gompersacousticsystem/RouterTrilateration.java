@@ -54,11 +54,11 @@ public class RouterTrilateration {
 		//double distance = Math.pow(base, exponent);
 	    //104.09004338 + 13.26842562x + 0.57250833x^2 + 0.00986120x^3 + 0.00006099x^4
 		
-//		  double distance = 104.09004338 + 13.26842562 * rssi + 0.57250833* Math.pow(rssi,2)
-//        + 0.00986120*Math.pow(rssi, 3) + 0.00006099 * Math.pow(rssi,4);
+		  double distance = 104.09004338 + 13.26842562 * signal + 0.57250833* Math.pow(signal,2)
+        + 0.00986120*Math.pow(signal, 3) + 0.00006099 * Math.pow(signal,4);
 		
-		double distance = 730.24198315 + 52.33325511*signal + 1.35152407*Math.pow(signal, 2) 
-	    + 0.01481265*Math.pow(signal, 3) + 0.00005900*Math.pow(signal, 4)+0.00541703*180;
+		//double distance = 730.24198315 + 52.33325511*signal + 1.35152407*Math.pow(signal, 2) 
+	    //+ 0.01481265*Math.pow(signal, 3) + 0.00005900*Math.pow(signal, 4)+0.00541703*180;
 		
 		return distance;
 		
