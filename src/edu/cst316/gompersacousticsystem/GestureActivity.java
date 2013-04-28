@@ -52,9 +52,9 @@ public class GestureActivity extends Activity {
         myManager = new DijkstraManager(darn);
         
         Signal signalStrength = new Signal(getContext());
-        Router r1 = new Router("dlink", signalStrength);
-        Router r2 = new Router("myqwest3331", signalStrength);
-        Router r3 = new Router("belkin-router", signalStrength);
+        r1 = new Router("dlink", signalStrength);
+        r2 = new Router("myqwest3331", signalStrength);
+        r3 = new Router("belkin-router", signalStrength);
         new RouterTrilateration(r1, r2, r3);
         RouterTrilateration.setLocation();
     }
@@ -76,7 +76,10 @@ public class GestureActivity extends Activity {
 	@Override
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
 	// TODO Auto-generated method stub
-		myManager.generatePath();
+		System.out.println("DEBUGGING");
+		//r1.update();
+		//r2.update();
+		//r3.update();
 		walkin();
 		return super.onFling(e1, e2, velocityX, velocityY);
 	}
@@ -100,15 +103,18 @@ public class GestureActivity extends Activity {
 		double[] giveMeThat = new double[3];
 		Signal ourSignal = new Signal(GestureActivity.getContext());
 		ArrayList<ScanResult> scanResulsts;
-		while(true)
-		{
+//		while(true)
+//		{
+			r1.update();
+			r2.update();
+			r3.update();
 			scanResulsts = (ArrayList<ScanResult>)ourSignal.getWifiLevels();
 			//giveMeThat = RouterTrilateration.MyTrilateration(0.0,0.0, (double)scanResulsts.get(0).level, 10.0, 20.0, (double)scanResulsts.get(1).level, 20.0, 0.0, (double)scanResulsts.get(2).level);
 			giveMeThat = rt.MyTrilateration();
 			currentPoint = new Point(giveMeThat[1], giveMeThat[2]);
 			myManager.changeUserPosition(currentPoint);
 			
-		}
+//		}
 	}
 
 	};

@@ -148,6 +148,10 @@ public class RouterTrilateration {
 			 router1.update();
 			 router2.update();
 			 router3.update();
+			 int a = router1.getLevel();
+			 double j = calcDistance(a);
+			 double k = calFeetToMeter(j);
+			 double l = convertDistToLongLatDegree(k);
 			 dist1 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router1.getLevel())));
 			 dist2 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router2.getLevel())));
 			 dist3 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router3.getLevel())));
@@ -204,7 +208,7 @@ public class RouterTrilateration {
 			 MyLocation[0] = MyLocation[0] + router1.getRouterLat();  //Lat1;
 			 MyLocation[1] = MyLocation[1] + router1.getRouterLong(); //Long1; 
 			 
-			 for (int i=0;i<1;i++){
+			 for (int i=0;i<=1;i++){
 				 
 				 System.out.println(MyLocation[i]);
 			 }

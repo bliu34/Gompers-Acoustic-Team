@@ -16,23 +16,40 @@ public class Router {
 
 	public Router(String SSID, Signal signalStrength) {
 		this.SSID = SSID;
-		//Signal signalStrength = new Signal(GestureActivity.getContext());
+		this.signalStrength = signalStrength;
+		// Signal signalStrength = new Signal(GestureActivity.getContext());
+		int i = 0;
 		try {
-			// level = Integer.valueOf(0);
+			//level = Integer.valueOf(0);
+			// results = signalStrength.getWifiLevels();
+			// level =
+			// Integer.valueOf((results.get(results.indexOf(SSID)).level));
 			results = signalStrength.getWifiLevels();
-			level = Integer.valueOf((results.get(results.indexOf(SSID)).level));
+			for (i = 0; i < results.size() && !results.get(i).SSID.equals(SSID); i++) {
+//				System.out.print(results.get(i).SSID + " " + this.SSID + " ");
+//				System.out.println(results.get(i).level);
+			}
 		} catch (NullPointerException e) {
 			e.printStackTrace();
-		} catch (ArrayIndexOutOfBoundsException e){
-			Toast toast = Toast.makeText(GestureActivity.getContext(), SSID + " is not working.", Toast.LENGTH_SHORT);
+		} catch (ArrayIndexOutOfBoundsException e) {
+			Toast toast = Toast.makeText(GestureActivity.getContext(), SSID
+					+ " is not working.", Toast.LENGTH_SHORT);
 			toast.show();
 		}
+		setLevel(Integer.valueOf(results.get(i).level));
 		
+
 	}
-	
-	public void update(){
+
+	public void update() {
+		signalStrength.update();
 		results = signalStrength.getWifiLevels();
-		level = Integer.valueOf(results.get(results.indexOf(SSID)).level);
+		int i = 0;
+		for (i = 0; i < results.size() && !results.get(i).SSID.equals(SSID); i++) {
+			}
+		setLevel(Integer.valueOf(results.get(i).level));
+		
+		System.out.println(getSSID() + " " + getLevel());
 	}
 
 	public void setLevel(Integer level) {

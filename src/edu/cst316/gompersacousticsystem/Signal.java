@@ -18,20 +18,32 @@ public class Signal {
 		toast.show();
 		manager = (WifiManager)myContext.getSystemService(Context.WIFI_SERVICE);
 		manager.createWifiLock(WifiManager.WIFI_MODE_SCAN_ONLY, null);
-		manager.startScan();
 		
+		manager.startScan();
+		while (manager.getScanResults() == null){
+				try {
+					Thread.sleep(10000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}; 
+	}
+	
+	public void update(){
+		manager.startScan();
 		while (manager.getScanResults() == null){
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(7000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}; 
 	}
-	
 	public List<ScanResult> getWifiLevels()
 	{
+		
 		return manager.getScanResults();
 	}
 	

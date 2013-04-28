@@ -7,10 +7,10 @@ import junit.framework.TestCase;
 public class RouterTrilaterationTest extends TestCase {
 
 	public void testMyTrilateration() {
-		
-		Router router1 = new Router("myqwest3331");
-		Router router2 = new Router("dlink");
-		Router router3 = new Router("belkin-router");
+		Signal signalStrength = new Signal(GestureActivity.getContext());
+		Router router1 = new Router("myqwest3331", signalStrength);
+		Router router2 = new Router("dlink", signalStrength);
+		Router router3 = new Router("belkin-router", signalStrength);
 		RouterTrilateration trilateration = new RouterTrilateration(router1, router2, router3);
 	
 
