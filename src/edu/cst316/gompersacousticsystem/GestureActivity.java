@@ -101,11 +101,17 @@ public class GestureActivity extends Activity {
 	{
 		Point currentPoint;
 		double[] giveMeThat = new double[2];
+		ArrayList<String> directions = new ArrayList<String>();
 		Signal ourSignal = new Signal(GestureActivity.getContext());
 		ArrayList<ScanResult> scanResulsts;
 		ArrayList<Vertex> path = myManager.generatePath();
+		directions.add("Forward");
+		for(int i = 1; i < path.size(); i++ )
+			directions.add(path.get(i).whereToTurn(path.get(i-1)));
+		
+		System.out.println(directions.toString());
 		myManager.playSound(8);
-		while(true){
+		//while(true){
 			r1.update();
 			r2.update();
 			r3.update();
@@ -114,7 +120,7 @@ public class GestureActivity extends Activity {
 			giveMeThat = rt.MyTrilateration();
 			currentPoint = new Point(giveMeThat[0], giveMeThat[1]);
 			myManager.changeUserPosition(currentPoint);
-		}
+		//}
 	}
 
 	};
