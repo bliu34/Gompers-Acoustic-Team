@@ -23,11 +23,11 @@ public class graphFactoryASU {
 					new Area(new Point(30, 20), new Point(35, 25)));
 			
 			vertexList = new ArrayList<Vertex>();
-			vertexList.add(backLeftCorner);
-			vertexList.add(backRightCorner);
-			vertexList.add(frontLeftCorner);
-			vertexList.add(frontRightCorner);
 			vertexList.add(door);
+			vertexList.add(frontRightCorner);
+			vertexList.add(frontLeftCorner);
+			vertexList.add(backRightCorner);
+			vertexList.add(backLeftCorner);
 			
 			Edge cafToBath = new Edge("caf to bath", backLeftCorner, backRightCorner, 45);
 			Edge bathToFront = new Edge("bath to front", backLeftCorner, frontLeftCorner, 20);
