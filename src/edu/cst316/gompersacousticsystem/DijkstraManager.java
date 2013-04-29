@@ -59,10 +59,10 @@ public class DijkstraManager {
 			}
 			if (changed == true){
 				if (latestUserVertex == 3){
-					playSound(8); //reached destination
+					playSound(9); //reached destination
 				}
 				else {
-					playSound(5); //Turn Left
+					playSound(6); //Turn Left
 				}
 			}
 		}
