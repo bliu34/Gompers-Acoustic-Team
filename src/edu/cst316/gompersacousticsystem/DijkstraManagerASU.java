@@ -15,8 +15,8 @@ public class DijkstraManagerASU {
 	public DijkstraManagerASU(Graph graph) {
 		myDa = new DijkstraAlgorithm(graph);
 		vertexes = (ArrayList<Vertex>) graph.getVertexes();
-		latestUserVertex = 0;
-		curSelectedVertex = 4;
+		latestUserVertex = 4;
+		curSelectedVertex = 0;
 	}
 
 	public ArrayList<Vertex> generatePath() {
