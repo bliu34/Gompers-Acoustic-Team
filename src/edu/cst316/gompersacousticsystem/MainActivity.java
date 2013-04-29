@@ -7,7 +7,11 @@ import edu.cst316.gompersacousticsystem.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,6 +25,8 @@ import android.view.View;
  * @see SystemUiHider
  */
 public class MainActivity extends Activity {
+	
+	LocationManager locationManager;
 	/**
 	 * Whether or not the system UI should be auto-hidden after
 	 * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -52,6 +58,31 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+		// Define a listener that responds to location updates
+		LocationListener locationListener = new LocationListener() {
+		    public void onLocationChanged(Location location) {
+		      // Called when a new location is found by the network location provider.
+		      makeUseOfNewLocation(location);
+		    }
+
+		    public void onStatusChanged1(String provider, int status, Bundle extras) {}
+
+		    public void onProviderEnabled(String provider) {}
+
+		    public void onProviderDisabled(String provider) {}
+
+			@Override
+			public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
+				// TODO Auto-generated method stub
+				
+			}
+		  };
+
+		// Register the listener with the Location Manager to receive location updates
+		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
 
 		setContentView(R.layout.activity_main);
 		Intent gesture = new Intent(this, GestureActivity.class);
@@ -162,6 +193,13 @@ public class MainActivity extends Activity {
 			mSystemUiHider.hide();
 		}
 	};
+	
+	public void makeUseOfNewLocation(Location location)
+	{
+		System.out.println(location.getLatitude());
+		System.out.println(location.getAltitude());
+		System.out.println(location.getAccuracy());
+	}
 
 	/**
 	 * Schedules a call to hide() in [delay] milliseconds, canceling any
