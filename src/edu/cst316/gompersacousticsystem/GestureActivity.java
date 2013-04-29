@@ -121,8 +121,29 @@ public class GestureActivity extends Activity {
 			giveMeThat = rt.MyTrilateration();
 			currentPoint = new Point(giveMeThat[0], giveMeThat[1]);
 			boolean haveWeMoved = myManager.changeUserPosition(currentPoint);
-			if(haveWeMoved)
-				myManager.playSound(7);
+			if(haveWeMoved){
+				//myManager.playSound(7);
+			
+			for(int i=0; i < directions.size(); i++){
+				
+				if (directions.get(i) == "RIGHT"){
+					myManager.playSound(7);
+				}
+				
+				else if(directions.get(i) == "LEFT"){
+					myManager.playSound(6);
+				}
+				
+				else if(directions.get(i) == "FORWARD"){
+					myManager.playSound(8);
+				}
+				
+				else if(directions.get(i) == "REVERSE"){
+					myManager.playSound(6);
+					myManager.playSound(6);
+				}
+			}
+			}
 		}
 	}
 
