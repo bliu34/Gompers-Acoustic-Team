@@ -4,6 +4,7 @@ public class Vertex {
 	  final private String id;
 	  final private String name;
 	  final private Area position;
+	  private static int lastRelative;
 	  
 	  
 	  public Vertex(String id, String name, Area position) {
@@ -53,10 +54,11 @@ public class Vertex {
 	    return true;
 	  }
 	  
-	  public int relativeDirection(Vertex previous){
-		  int relativeDirection = 5;
+	  public String whereToTurn(Vertex previous){
+		  int relativeDirection = 0;
 		  Point p = previous.getArea().getBottomLeft();
 		  Point p2 = position.getBottomLeft();
+		  String direction = "IDK YOU REALLY SCREWED UP SOMEWHERE";
 		  
 		  if(p.getX() == p2.getX()){
 			  if(p.getY() > p2.getY())
@@ -69,7 +71,31 @@ public class Vertex {
 		  else if(p.getX() < p2.getX())
 				  relativeDirection = 2;
 		  
-		  return relativeDirection;
+		  if(lastRelative == relativeDirection)
+			  direction = "FORWARD";
+		  else if(lastRelative == -relativeDirection)
+			  direction = "REVERSE";
+		  else if(lastRelative == 1 && relativeDirection == -2)
+			  direction = "LEFT";
+		  else if(lastRelative == 1 && relativeDirection == 2)
+			  direction = "RIGHT";
+		  else if(lastRelative == -1 && relativeDirection == -2)
+			  direction = "RIGHT";
+		  else if(lastRelative == -1 && relativeDirection == 2)
+			  direction = "LEFT";
+		  else if(lastRelative == 2 && relativeDirection == -1)
+			  direction = "RIGHT";
+		  else if(lastRelative == 2 && relativeDirection == 1)
+			  direction = "LEFT";
+		  else if(lastRelative == -2 && relativeDirection == -1)
+			  direction = "LEFT";
+		  else if(lastRelative == -2 && relativeDirection == 1)
+			  direction = "RIGHT";
+		  
+		  lastRelative = relativeDirection;
+		  
+		  return direction;
+			  
 	  }
 
 	  @Override
