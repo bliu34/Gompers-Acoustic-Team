@@ -49,7 +49,7 @@ public class GestureActivity extends Activity {
         ah.add(new Edge("c",c,d,1));
         
         Graph darn = (new graphFactoryASU()).getGraph();
-        myManager = new DijkstraManagerASU(darn);
+        myManager = new DijkstraManagerASU((new graphFactoryASU()).getGraph());
         
         Signal signalStrength = new Signal(getContext());
         r1 = new Router("dlink", signalStrength);

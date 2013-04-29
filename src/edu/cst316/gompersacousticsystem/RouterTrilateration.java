@@ -216,12 +216,7 @@ public class RouterTrilateration {
 			 MyLocation = myRotation(MyLat, MyLong, 0, -deg);
 			 
 			 MyLocation[0] = MyLocation[0] + router1.getRouterLat();  //Lat1;
-			 MyLocation[1] = MyLocation[1] + router1.getRouterLong(); //Long1; 
-			 
-			 for (int i=0;i<=1;i++){
-				 
-				 System.out.println(MyLocation[i]);
-			 }
+			 MyLocation[1] = MyLocation[1] + router1.getRouterLong(); //Long1;
 			 
 			 return MyLocation;
 			 
