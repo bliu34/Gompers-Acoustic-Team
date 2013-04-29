@@ -12,17 +12,15 @@ public class Vertex {
 	    this.position = position;
 	    
 	  }
+	  
+	  public Area getArea(){
+		  return position;
+	  }
 	  public String getId() {
 	    return id;
 	  }
 	  
-	  public Area getPosition()
-	  {
-		  return position;
-	  }
-	  
-	  public boolean inArea(Point position)
-	  {
+	  public boolean inArea(Point position) {
 		  return this.position.isPointinArea(position);
 	  }
 
@@ -53,6 +51,25 @@ public class Vertex {
 	    } else if (!id.equals(other.id))
 	      return false;
 	    return true;
+	  }
+	  
+	  public int relativeDirection(Vertex previous){
+		  int relativeDirection = 5;
+		  Point p = previous.getArea().getBottomLeft();
+		  Point p2 = position.getBottomLeft();
+		  
+		  if(p.getX() == p2.getX()){
+			  if(p.getY() > p2.getY())
+				  relativeDirection = -1;
+			  if(p.getY() < p2.getY())
+				  relativeDirection = 1;
+		  }
+		  else if(p.getX() > p2.getX())
+				  relativeDirection = -2;
+		  else if(p.getX() < p2.getX())
+				  relativeDirection = 2;
+		  
+		  return relativeDirection;
 	  }
 
 	  @Override
