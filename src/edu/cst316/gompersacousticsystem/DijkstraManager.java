@@ -74,16 +74,16 @@ public class DijkstraManager {
 		int soundID = 0;
 		switch (i) {
 		case 0:
-			soundID = R.raw.moon;
+			soundID = R.raw.bathrooms;
 			break;
 		case 1:
-			soundID = R.raw.eastla;
+			soundID = R.raw.cafeteria;
 			break;
 		case 2:
-			soundID = R.raw.grandcanyon;
+			soundID = R.raw.casemanagers;
 			break;
 		case 3:
-			soundID = R.raw.grandmahouse;
+			soundID = R.raw.homeseat;
 			break;
 		case 5:
 			soundID = R.raw.turnleft;
