@@ -105,8 +105,7 @@ public class GestureActivity extends Activity {
 		ArrayList<ScanResult> scanResulsts;
 		ArrayList<Vertex> path = myManager.generatePath();
 		myManager.playSound(8);
-	  //while(true)
-		//{
+		while(true){
 			r1.update();
 			r2.update();
 			r3.update();
@@ -114,9 +113,8 @@ public class GestureActivity extends Activity {
 			//giveMeThat = RouterTrilateration.MyTrilateration(0.0,0.0, (double)scanResulsts.get(0).level, 10.0, 20.0, (double)scanResulsts.get(1).level, 20.0, 0.0, (double)scanResulsts.get(2).level);
 			giveMeThat = rt.MyTrilateration();
 			currentPoint = new Point(giveMeThat[0], giveMeThat[1]);
-			System.out.println(giveMeThat[0] + " " + giveMeThat[1]);
 			myManager.changeUserPosition(currentPoint);
-		//}
+		}
 	}
 
 	};
