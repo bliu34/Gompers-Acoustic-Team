@@ -73,28 +73,35 @@ public class DijkstraManager {
 	public void playSound(int i) {
 		int soundID = 0;
 		switch (i) {
+		
 		case 0:
-			soundID = R.raw.bathrooms;
+			soundID = R.raw.frontdoors;
 			break;
 		case 1:
-			soundID = R.raw.cafeteria;
+			soundID = R.raw.bathrooms;
 			break;
 		case 2:
-			soundID = R.raw.casemanagers;
+			soundID = R.raw.frontdoors;
 			break;
 		case 3:
-			soundID = R.raw.homeseat;
+			soundID = R.raw.cafeteria;
+			break;
+		case 4:
+			soundID = R.raw.casemanagers;
 			break;
 		case 5:
-			soundID = R.raw.turnleft;
+			soundID = R.raw.homeseat;
 			break;
 		case 6:
-			soundID = R.raw.turnright;
+			soundID = R.raw.turnleft;
 			break;
 		case 7:
-			soundID = R.raw.straight;
+			soundID = R.raw.turnright;
 			break;
 		case 8:
+			soundID = R.raw.straight;
+			break;
+		case 9:
 			soundID = R.raw.destination;
 			break;
 		}
