@@ -4,7 +4,7 @@ public class Vertex {
 	  final private String id;
 	  final private String name;
 	  final private Area position;
-	  private static int lastRelative;
+	  private static int lastRelative = 1;
 	  
 	  
 	  public Vertex(String id, String name, Area position) {
