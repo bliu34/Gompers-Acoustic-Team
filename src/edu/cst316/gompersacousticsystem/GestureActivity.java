@@ -105,8 +105,8 @@ public class GestureActivity extends Activity {
 		ArrayList<ScanResult> scanResulsts;
 		ArrayList<Vertex> path = myManager.generatePath();
 		myManager.playSound(8);
-		while(true)
-		{
+	  //while(true)
+		//{
 			r1.update();
 			r2.update();
 			r3.update();
@@ -116,7 +116,7 @@ public class GestureActivity extends Activity {
 			currentPoint = new Point(giveMeThat[1], giveMeThat[2]);
 			System.out.println(giveMeThat[1] + " " + giveMeThat[2]);
 			myManager.changeUserPosition(currentPoint);
-		}
+		//}
 	}
 
 	};
