@@ -82,7 +82,7 @@ public class MainActivity extends Activity {
 		  };
 
 		// Register the listener with the Location Manager to receive location updates
-		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
 
 		setContentView(R.layout.activity_main);
 		Intent gesture = new Intent(this, GestureActivity.class);
