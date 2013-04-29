@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class GestureActivity extends Activity {
 	
 	TextView gestureEvent;
-	DijkstraManager myManager;
+	DijkstraManagerASU myManager;
 	private static Context context;
 	Router r1, r2, r3;
 	RouterTrilateration rt;
@@ -49,7 +49,7 @@ public class GestureActivity extends Activity {
         ah.add(new Edge("c",c,d,1));
         
         Graph darn = new Graph(oh, ah);
-        myManager = new DijkstraManager(darn);
+        myManager = new DijkstraManagerASU(darn);
         
         Signal signalStrength = new Signal(getContext());
         r1 = new Router("dlink", signalStrength);

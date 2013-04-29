@@ -28,7 +28,7 @@ public class DijkstraManager {
 		if (curSelectedVertex == latestUserVertex)
 			curSelectedVertex++;
 
-		if (curSelectedVertex >= vertexes.size())
+		if (curSelectedVertex > vertexes.size())
 			curSelectedVertex = 0;
 
 		playSound(curSelectedVertex + 1);
