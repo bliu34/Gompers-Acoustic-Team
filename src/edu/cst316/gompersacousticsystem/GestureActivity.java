@@ -48,7 +48,7 @@ public class GestureActivity extends Activity {
         ah.add(new Edge("b", b, c, 1));
         ah.add(new Edge("c",c,d,1));
         
-        Graph darn = new Graph(oh, ah);
+        Graph darn = (new graphFactoryASU()).getGraph();
         myManager = new DijkstraManagerASU(darn);
         
         Signal signalStrength = new Signal(getContext());
