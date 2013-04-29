@@ -106,6 +106,7 @@ public class GestureActivity extends Activity {
 		ArrayList<ScanResult> scanResulsts;
 		ArrayList<Vertex> path = myManager.generatePath();
 		directions.add("Forward");
+		System.out.println(path.toString());
 		for(int i = 1; i < path.size(); i++ )
 			directions.add(path.get(i).whereToTurn(path.get(i-1)));
 		
