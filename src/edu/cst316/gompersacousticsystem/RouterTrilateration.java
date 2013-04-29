@@ -22,22 +22,31 @@ public class RouterTrilateration {
 		router2 = r2;
 		router3 = r3; 
 				
-		router1.setRouterLat(33.524437);
-		router2.setRouterLat(33.524344);
-		router3.setRouterLat(33.524347);
+		router1.setRouterLat(33.306067);
+		router2.setRouterLat(33.306079);
+		router3.setRouterLat(33.306046);
 		
-		router1.setRouterLong(-112.173313);
-		router2.setRouterLong(-112.173544);
-		router3.setRouterLong(-112.172918);
+		router1.setRouterLong(-111.679155);
+		router2.setRouterLong(-111.679016);
+		router3.setRouterLong(-111.679103);
 	}
 	public static void setLocation(){
-		router1.setRouterLat(33.524437);
-		router2.setRouterLat(33.524344);
-		router3.setRouterLat(33.524347);
 		
-		router1.setRouterLong(-112.173313);
-		router2.setRouterLong(-112.173544);
-		router3.setRouterLong(-112.172918);
+		router1.setRouterLat(33.306067);
+		router2.setRouterLat(33.306079);
+		router3.setRouterLat(33.306046);
+		
+		//router1.setRouterLat(33.524437); //Gompers Coordinates
+		//router2.setRouterLat(33.524344);
+		//router3.setRouterLat(33.524347);
+		
+		//router1.setRouterLong(-112.173313); //Gompers Coordinates
+		//router2.setRouterLong(-112.173544);
+		//router3.setRouterLong(-112.172918);
+		
+		router1.setRouterLong(-111.679155);
+		router2.setRouterLong(-111.679016);
+		router3.setRouterLong(-111.679103);
 		}
 	
 	public void updateRouters(){
@@ -54,11 +63,11 @@ public class RouterTrilateration {
 		//double distance = Math.pow(base, exponent);
 	    //104.09004338 + 13.26842562x + 0.57250833x^2 + 0.00986120x^3 + 0.00006099x^4
 		
-		  double distance = 104.09004338 + 13.26842562 * signal + 0.57250833* Math.pow(signal,2)
-        + 0.00986120*Math.pow(signal, 3) + 0.00006099 * Math.pow(signal,4);
+		//  double distance = 104.09004338 + 13.26842562 * signal + 0.57250833* Math.pow(signal,2)
+        //+ 0.00986120*Math.pow(signal, 3) + 0.00006099 * Math.pow(signal,4);
 		
-		//double distance = 730.24198315 + 52.33325511*signal + 1.35152407*Math.pow(signal, 2) 
-	    //+ 0.01481265*Math.pow(signal, 3) + 0.00005900*Math.pow(signal, 4)+0.00541703*180;
+		double distance = 730.24198315 + 52.33325511*signal + 1.35152407*Math.pow(signal, 2) 
+	    + 0.01481265*Math.pow(signal, 3) + 0.00005900*Math.pow(signal, 4)+0.00541703*180;
 		
 		return distance;
 		
