@@ -100,7 +100,7 @@ public class GestureActivity extends Activity {
 	public void walkin()
 	{
 		Point currentPoint;
-		double[] giveMeThat = new double[3];
+		double[] giveMeThat = new double[2];
 		Signal ourSignal = new Signal(GestureActivity.getContext());
 		ArrayList<ScanResult> scanResulsts;
 		ArrayList<Vertex> path = myManager.generatePath();
@@ -113,8 +113,8 @@ public class GestureActivity extends Activity {
 			scanResulsts = (ArrayList<ScanResult>)ourSignal.getWifiLevels();
 			//giveMeThat = RouterTrilateration.MyTrilateration(0.0,0.0, (double)scanResulsts.get(0).level, 10.0, 20.0, (double)scanResulsts.get(1).level, 20.0, 0.0, (double)scanResulsts.get(2).level);
 			giveMeThat = rt.MyTrilateration();
-			currentPoint = new Point(giveMeThat[1], giveMeThat[2]);
-			System.out.println(giveMeThat[1] + " " + giveMeThat[2]);
+			currentPoint = new Point(giveMeThat[0], giveMeThat[1]);
+			System.out.println(giveMeThat[0] + " " + giveMeThat[1]);
 			myManager.changeUserPosition(currentPoint);
 		//}
 	}
