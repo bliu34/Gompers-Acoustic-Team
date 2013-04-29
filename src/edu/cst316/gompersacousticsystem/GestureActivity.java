@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class GestureActivity extends Activity {
 	
 	TextView gestureEvent;
-	DijkstraManager myManager;
+	DijkstraManagerASU myManager;
 	private static Context context;
 	Router r1, r2, r3;
 	RouterTrilateration rt;
@@ -49,7 +49,7 @@ public class GestureActivity extends Activity {
         ah.add(new Edge("c",c,d,1));
         
         Graph darn = new Graph(oh, ah);
-        myManager = new DijkstraManager(darn);
+        myManager = new DijkstraManagerASU(darn);
         
         Signal signalStrength = new Signal(getContext());
         r1 = new Router("dlink", signalStrength);
@@ -103,8 +103,10 @@ public class GestureActivity extends Activity {
 		double[] giveMeThat = new double[3];
 		Signal ourSignal = new Signal(GestureActivity.getContext());
 		ArrayList<ScanResult> scanResulsts;
-//		while(true)
-//		{
+		ArrayList<Vertex> path = myManager.generatePath();
+		myManager.playSound(8);
+		while(true)
+		{
 			r1.update();
 			r2.update();
 			r3.update();
@@ -112,9 +114,9 @@ public class GestureActivity extends Activity {
 			//giveMeThat = RouterTrilateration.MyTrilateration(0.0,0.0, (double)scanResulsts.get(0).level, 10.0, 20.0, (double)scanResulsts.get(1).level, 20.0, 0.0, (double)scanResulsts.get(2).level);
 			giveMeThat = rt.MyTrilateration();
 			currentPoint = new Point(giveMeThat[1], giveMeThat[2]);
+			System.out.println(giveMeThat[1] + " " + giveMeThat[2]);
 			myManager.changeUserPosition(currentPoint);
-			
-//		}
+		}
 	}
 
 	};

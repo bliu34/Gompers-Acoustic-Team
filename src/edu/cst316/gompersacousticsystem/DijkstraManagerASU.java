@@ -6,13 +6,13 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.view.View;
 
-public class DijkstraManager {
+public class DijkstraManagerASU {
 	private DijkstraAlgorithm myDa;
 	private int latestUserVertex;
 	private int curSelectedVertex;
 	private ArrayList<Vertex> vertexes;
 
-	public DijkstraManager(Graph graph) {
+	public DijkstraManagerASU(Graph graph) {
 		myDa = new DijkstraAlgorithm(graph);
 		vertexes = (ArrayList<Vertex>) graph.getVertexes();
 	}
@@ -75,22 +75,22 @@ public class DijkstraManager {
 		switch (i) {
 		
 		case 0:
-			soundID = R.raw.frontdoors;
+			soundID = R.raw.door;
 			break;
 		case 1:
-			soundID = R.raw.bathrooms;
+			soundID = R.raw.backleftcorner;
 			break;
 		case 2:
-			soundID = R.raw.frontdoors;
+			soundID = R.raw.door;
 			break;
 		case 3:
-			soundID = R.raw.cafeteria;
+			soundID = R.raw.frontrightcorner;
 			break;
 		case 4:
-			soundID = R.raw.casemanagers;
+			soundID = R.raw.frontleftcorner;
 			break;
 		case 5:
-			soundID = R.raw.homeseat;
+			soundID = R.raw.backrightcorner;
 			break;
 		case 6:
 			soundID = R.raw.turnleft;

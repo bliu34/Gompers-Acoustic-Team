@@ -22,9 +22,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int black_overlay=0x7f050000;
     }
     public static final class drawable {
-        public static final int floorplan_edited=0x7f020000;
-        public static final int floorplan_simple=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
+        public static final int demo=0x7f020000;
+        public static final int floorplan_edited=0x7f020001;
+        public static final int floorplan_simple=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
     }
     public static final class id {
         public static final int GestureEvent=0x7f080001;
@@ -35,6 +36,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int main=0x7f030001;
     }
     public static final class raw {
+<<<<<<< HEAD
         public static final int bathrooms=0x7f040000;
         public static final int cafeteria=0x7f040001;
         public static final int casemanagers=0x7f040002;
@@ -49,6 +51,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int turnleft=0x7f04000b;
         public static final int turnright=0x7f04000c;
         public static final int whereyougo=0x7f04000d;
+=======
+        public static final int backleftcorner=0x7f040000;
+        public static final int backrightcorner=0x7f040001;
+        public static final int bathrooms=0x7f040002;
+        public static final int cafeteria=0x7f040003;
+        public static final int casemanagers=0x7f040004;
+        public static final int destination=0x7f040005;
+        public static final int door=0x7f040006;
+        public static final int eastla=0x7f040007;
+        public static final int frontdoors=0x7f040008;
+        public static final int frontleftcorner=0x7f040009;
+        public static final int frontrightcorner=0x7f04000a;
+        public static final int grandcanyon=0x7f04000b;
+        public static final int grandmahouse=0x7f04000c;
+        public static final int homeseat=0x7f04000d;
+        public static final int moon=0x7f04000e;
+        public static final int straight=0x7f04000f;
+        public static final int turnleft=0x7f040010;
+        public static final int turnright=0x7f040011;
+        public static final int whereyougo=0x7f040012;
+>>>>>>> c0acb94b4d7922e08a5958696a82c1ce3631ca8b
     }
     public static final class string {
         public static final int app_name=0x7f060000;
