@@ -88,7 +88,7 @@ public class Directory {
 	}
 }
 
-/*Code Review 
+/* Code Review - Ben
 	1. Good practice, initiated near the top
 	2. Getters and setters look fine.
 	3. On line 35 your frontlong should be used, but on line 37, you miscall frontlat.

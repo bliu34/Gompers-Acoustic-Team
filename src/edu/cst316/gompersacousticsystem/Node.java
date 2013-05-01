@@ -38,6 +38,6 @@ public class Node {
 
 }
 
-/* Code Review
+/* Code Review - Ben
 	1. Clean getters and setters.
 */
