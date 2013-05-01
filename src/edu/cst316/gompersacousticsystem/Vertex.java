@@ -1,5 +1,15 @@
 package edu.cst316.gompersacousticsystem;
 
+/*
+Author: Lars Vogel
+Date: 02.11.2009
+Title: Dijkstra's shortest path algorithm in Java
+Version: (1.1)
+Form: Java
+Availability: http://www.vogella.com/articles/JavaAlgorithmsDijkstra/article.html
+Adapted from but we made changes.
+*/
+
 public class Vertex {
 	  final private String id;
 	  final private String name;
@@ -55,6 +65,7 @@ public class Vertex {
 	  }
 	  
 	  public String whereToTurn(Vertex previous){
+		  
 		  int relativeDirection = 0;
 		  Point p = previous.getArea().getBottomLeft();
 		  Point p2 = position.getBottomLeft();
