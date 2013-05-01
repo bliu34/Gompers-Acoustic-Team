@@ -75,33 +75,30 @@ public class DijkstraManager {
 		switch (i) {
 		
 		case 0:
-			soundID = R.raw.frontdoors;
-			break;
-		case 1:
 			soundID = R.raw.bathrooms;
 			break;
-		case 2:
+		case 1:
 			soundID = R.raw.frontdoors;
 			break;
-		case 3:
+		case 2:
 			soundID = R.raw.cafeteria;
 			break;
-		case 4:
+		case 3:
 			soundID = R.raw.casemanagers;
 			break;
-		case 5:
+		case 4:
 			soundID = R.raw.homeseat;
 			break;
-		case 6:
+		case 5:
 			soundID = R.raw.turnleft;
 			break;
-		case 7:
+		case 6:
 			soundID = R.raw.turnright;
 			break;
-		case 8:
+		case 7:
 			soundID = R.raw.straight;
 			break;
-		case 9:
+		case 8:
 			soundID = R.raw.destination;
 			break;
 		}
