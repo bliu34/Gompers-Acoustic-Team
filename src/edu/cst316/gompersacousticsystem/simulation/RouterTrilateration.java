@@ -13,9 +13,41 @@ import java.util.ArrayList;
 
 public class RouterTrilateration {
 
-	//private Router router1 = new Router("Router1");
-	//private Router router2 = new Router("Router2");
-	//private Router router3 = new Router("Router3");
+	private static Router router1;
+	private static Router router2;
+	private static Router router3;
+
+	public RouterTrilateration(Router r1, Router r2, Router r3){
+		router1 = r1;
+		router2 = r2;
+		router3 = r3; 
+				
+		router1.setRouterLat(33.306067);
+		router2.setRouterLat(33.306079);
+		router3.setRouterLat(33.306046);
+		
+		router1.setRouterLong(-111.679155);
+		router2.setRouterLong(-111.679016);
+		router3.setRouterLong(-111.679103);
+	}
+	public static void setLocation(){
+		
+		router1.setRouterLat(33.306067);
+		router2.setRouterLat(33.306079);
+		router3.setRouterLat(33.306046);
+		
+		//router1.setRouterLat(33.524437); //Gompers Coordinates
+		//router2.setRouterLat(33.524344);
+		//router3.setRouterLat(33.524347);
+		
+		//router1.setRouterLong(-112.173313); //Gompers Coordinates
+		//router2.setRouterLong(-112.173544);
+		//router3.setRouterLong(-112.172918);
+		
+		router1.setRouterLong(-111.679155);
+		router2.setRouterLong(-111.679016);
+		router3.setRouterLong(-111.679103);
+		}
 	
 	static double calcDistance(double signal){
 		
@@ -25,8 +57,9 @@ public class RouterTrilateration {
 		//double distance = Math.pow(base, exponent);
 	    //104.09004338 + 13.26842562x + 0.57250833x^2 + 0.00986120x^3 + 0.00006099x^4
 		
-//		  double distance = 104.09004338 + 13.26842562 * rssi + 0.57250833* Math.pow(rssi,2)
-//        + 0.00986120*Math.pow(rssi, 3) + 0.00006099 * Math.pow(rssi,4);
+
+		//  double distance = 104.09004338 + 13.26842562 * signal + 0.57250833* Math.pow(signal,2)
+        //+ 0.00986120*Math.pow(signal, 3) + 0.00006099 * Math.pow(signal,4);
 		
 		double distance = 730.24198315 + 52.33325511*signal + 1.35152407*Math.pow(signal, 2) 
 	    + 0.01481265*Math.pow(signal, 3) + 0.00005900*Math.pow(signal, 4)+0.00541703*180;
@@ -88,11 +121,14 @@ public class RouterTrilateration {
 			 return myLocation;
 		 }
 		 
-		 public static double[] MyTrilateration(double Lat1, double Long1, double signal1, 
-					                     double Lat2, double Long2, double signal2,
-					                     double Lat3, double Long3, double signal3) {
+		// public static double[] MyTrilateration(double Lat1, double Long1, double signal1, 
+			//		                     double Lat2, double Long2, double signal2,
+				//	                     double Lat3, double Long3, double signal3) {
 			 
+		   public static double[] MyTrilateration(){
 			 //ArrayList<Double> tmpWAP1, tmpWAP2, tmpWAP3;
+			 
+			   
 			 
 			 //Technical Standard used for accessing info through the internet.
 			 //Temporary array for storing coordinates for actual user location
@@ -109,15 +145,26 @@ public class RouterTrilateration {
 			 double[] MyLocation = new double[2];
 			 
 			 
-			 dist1 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal1)));
-			 dist2 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal2)));
-			 dist3 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal3)));
+			//dist1 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal1)));
+			//dist2 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal2)));
+			//dist3 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(signal3)));
 			 
-			 		 
-			 tmpLat2  = Lat2 - Lat1;
-			 tmpLong2 = Long2 - Long1;
-			 tmpLat3  = Lat3 - Lat1;
-			 tmpLong3 = Long3 - Long1;
+			 
+			 
+			 dist1 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router1.getLevel())));
+			 dist2 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router2.getLevel())));
+			 dist3 = convertDistToLongLatDegree(calFeetToMeter(calcDistance(router3.getLevel())));
+			 
+			 	
+			 tmpLat2 = router2.getRouterLat() - router1.getRouterLat();
+			 tmpLong2 = router2.getRouterLong() - router1.getRouterLong();
+			 tmpLat3 = router3.getRouterLat() - router1.getRouterLat();
+			 tmpLong3 = router3.getRouterLong() - router1.getRouterLong();
+			 
+			 //tmpLat2  = Lat2 - Lat1;
+			 //tmpLong2 = Long2 - Long1;
+			 //tmpLat3  = Lat3 - Lat1;
+			 //tmpLong3 = Long3 - Long1;
 			 
 			 tmpSlide = Math.sqrt(Math.pow(tmpLat2,2)+Math.pow(tmpLong2,2));
 			 
@@ -157,10 +204,17 @@ public class RouterTrilateration {
 			 
 			 MyLocation = myRotation(MyLat, MyLong, 0, -deg);
 			 
-			 MyLocation[0] = MyLocation[0] + Lat1;
-			 MyLocation[1] = MyLocation[1] + Long1; 
+			 MyLocation[0] = MyLocation[0] + router1.getRouterLat();  //Lat1;
+			 MyLocation[1] = MyLocation[1] + router1.getRouterLong(); //Long1;
 			 
 			 return MyLocation;
+			 
 		 }
-	
 }
+
+/* Code Review
+ 	1. The import java.util.ArrayList is never used.
+ 	2. The value of the local variable base is not used.
+ 	3. The value of the local variable exponent is not used.
+ 	4. Your equations look a bit messy.
+*/

@@ -3,21 +3,18 @@ package edu.cst316.gompersacousticsystem.simulation;
 import java.util.Scanner;
 
 import edu.cst316.gompersacousticsystem.simulation.Directory;
-import edu.cst316.gompersacousticsystem.simulation.Node;
 import edu.cst316.gompersacousticsystem.simulation.Router;
 import edu.cst316.gompersacousticsystem.simulation.RouterTrilateration;
-import edu.cst316.gompersacousticsystem.simulation.Signal;
-import edu.cst316.gompersacousticsystem.simulation.UserLocation;
 
 public class TrilaterationSimulation {
-
-	private Router router1 = new Router("Router1");
-	private Router router2 = new Router("Router2");
-	private Router router3 = new Router("Router3");
+	
+	private Router router1 = new Router();
+	private Router router2 = new Router();
+	private Router router3 = new Router();
 	
 	private Directory mapDirectory = new Directory();
 	
-	private RouterTrilateration trilateration = new RouterTrilateration();
+	private RouterTrilateration trilateration = new RouterTrilateration(router1, router1, router1);
 	
 	
 	public TrilaterationSimulation(){

@@ -8,8 +8,12 @@ import java.util.List;
 //August 29th 2010
 //Talking Points 3
 //Version: r109
-//Java/Andriod Code
+//Java/Android Code
 //http://code.google.com/p/talking-points-3/source/browse/trunk/WifiPosition/src/TalkingPoint/thejoo/Trilateration.java?r=109
+//
+//Reference file for RouterTrilateration shouldn't be changed. Metrics, Refactoring and other techniques that would change content not 
+//used since it is not our code.
+//
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 public class Trilateration {
