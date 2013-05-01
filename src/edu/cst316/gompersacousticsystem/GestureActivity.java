@@ -155,3 +155,14 @@ public class GestureActivity extends Activity {
 		return GestureActivity.context;
 	}
 }
+
+//CODE REVIEW: Matthew Alvarado
+/*There are two methods that aren't really being used: onLongPress() and onDoubleTap(). These methods can be deleted. 
+ * However, in the case where we would need to implement more behaviors for the gestures, we would be able to use them.
+ * In the onCreate() method, we set the vertexes and edges used in the graph of the map, which is good. But when we set the 
+ * routers we give it a set signal strength. This shouldn't be the case, if I'm right, since the signal strength is likely to
+ * fluctuate. The walkin() method has a lot going on it in and looks pretty confusing. If more comments could be added, I think it
+ * would make it a lot cleaner. The for loop that plays the sound based on the element in the directions array
+ * could probably be put in it's own function. The walkin() method needs work since we really couldn't use it to guide the user
+ * anywhere.
+*/
