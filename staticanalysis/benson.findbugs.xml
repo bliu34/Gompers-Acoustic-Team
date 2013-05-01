@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2" sequence="1" timestamp="1367388944837" analysisTimestamp="1367388941844" release="">
+  <Project projectName="MainActivity">
+    <Jar>/Users/bliu/Gompers-Acoustic-Team/bin/classes</Jar>
+    <AuxClasspathEntry>/Users/bliu/Gompers-Acoustic-Team/bin/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/bliu/Gompers-Acoustic-Team/libs/android-support-v4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/bliu/Desktop/sdk/platforms/android-4.2/android.jar</AuxClasspathEntry>
+    <SrcDir>/Users/bliu/Gompers-Acoustic-Team/src</SrcDir>
+    <SrcDir>/Users/bliu/Gompers-Acoustic-Team/gen</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.GestureActivity">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.GestureActivity" sourcefile="GestureActivity.java" sourcepath="edu/cst316/gompersacousticsystem/GestureActivity.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.GestureActivity" name="onCreate" signature="(Landroid/os/Bundle;)V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.GestureActivity" start="29" end="60" startBytecode="0" endBytecode="707" sourcefile="GestureActivity.java" sourcepath="edu/cst316/gompersacousticsystem/GestureActivity.java"/>
+    </Method>
+    <Field classname="edu.cst316.gompersacousticsystem.GestureActivity" name="context" signature="Landroid/content/Context;" isStatic="true">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.GestureActivity" sourcefile="GestureActivity.java" sourcepath="edu/cst316/gompersacousticsystem/GestureActivity.java"/>
+    </Field>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.GestureActivity" start="33" end="33" startBytecode="28" endBytecode="28" sourcefile="GestureActivity.java" sourcepath="edu/cst316/gompersacousticsystem/GestureActivity.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.RouterTrilateration">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.RouterTrilateration" name="&lt;init&gt;" signature="(Ledu/cst316/gompersacousticsystem/Router;Ledu/cst316/gompersacousticsystem/Router;Ledu/cst316/gompersacousticsystem/Router;)V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" start="17" end="21" startBytecode="0" endBytecode="104" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+    </Method>
+    <Field classname="edu.cst316.gompersacousticsystem.RouterTrilateration" name="router1" signature="Ledu/cst316/gompersacousticsystem/Router;" isStatic="true">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+    </Field>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" start="18" end="18" startBytecode="5" endBytecode="5" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.RouterTrilateration">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.RouterTrilateration" name="&lt;init&gt;" signature="(Ledu/cst316/gompersacousticsystem/Router;Ledu/cst316/gompersacousticsystem/Router;Ledu/cst316/gompersacousticsystem/Router;)V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" start="17" end="21" startBytecode="0" endBytecode="104" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+    </Method>
+    <Field classname="edu.cst316.gompersacousticsystem.RouterTrilateration" name="router2" signature="Ledu/cst316/gompersacousticsystem/Router;" isStatic="true">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+    </Field>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" start="19" end="19" startBytecode="9" endBytecode="9" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.RouterTrilateration">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.RouterTrilateration" name="&lt;init&gt;" signature="(Ledu/cst316/gompersacousticsystem/Router;Ledu/cst316/gompersacousticsystem/Router;Ledu/cst316/gompersacousticsystem/Router;)V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" start="17" end="21" startBytecode="0" endBytecode="104" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+    </Method>
+    <Field classname="edu.cst316.gompersacousticsystem.RouterTrilateration" name="router3" signature="Ledu/cst316/gompersacousticsystem/Router;" isStatic="true">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+    </Field>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilateration" start="20" end="20" startBytecode="13" endBytecode="13" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilateration.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.RouterTrilaterationTest">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilaterationTest" sourcefile="RouterTrilaterationTest.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilaterationTest.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.RouterTrilaterationTest" name="testMyTrilateration" signature="()V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilaterationTest" start="10" end="46" startBytecode="0" endBytecode="66" sourcefile="RouterTrilaterationTest.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilaterationTest.java"/>
+    </Method>
+    <LocalVariable name="trilateration" register="5" pc="58" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.RouterTrilaterationTest" start="14" end="14" startBytecode="56" endBytecode="56" sourcefile="RouterTrilaterationTest.java" sourcepath="edu/cst316/gompersacousticsystem/RouterTrilaterationTest.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="trilateration"/>
+  </BugInstance>
+  <BugInstance type="IL_INFINITE_LOOP" priority="1" abbrev="IL" category="CORRECTNESS" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.UserLocation">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.UserLocation" sourcefile="UserLocation.java" sourcepath="edu/cst316/gompersacousticsystem/UserLocation.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.UserLocation" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.UserLocation" start="15" end="23" startBytecode="0" endBytecode="248" sourcefile="UserLocation.java" sourcepath="edu/cst316/gompersacousticsystem/UserLocation.java"/>
+    </Method>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.UserLocation" start="17" end="17" startBytecode="130" endBytecode="130" sourcefile="UserLocation.java" sourcepath="edu/cst316/gompersacousticsystem/UserLocation.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" name="&lt;init&gt;" signature="(Ledu/cst316/gompersacousticsystem/simulation/Router;Ledu/cst316/gompersacousticsystem/simulation/Router;Ledu/cst316/gompersacousticsystem/simulation/Router;)V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" start="20" end="32" startBytecode="0" endBytecode="182" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+    </Method>
+    <Field classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" name="router1" signature="Ledu/cst316/gompersacousticsystem/simulation/Router;" isStatic="true">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+    </Field>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" start="21" end="21" startBytecode="5" endBytecode="5" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" name="&lt;init&gt;" signature="(Ledu/cst316/gompersacousticsystem/simulation/Router;Ledu/cst316/gompersacousticsystem/simulation/Router;Ledu/cst316/gompersacousticsystem/simulation/Router;)V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" start="20" end="32" startBytecode="0" endBytecode="182" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+    </Method>
+    <Field classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" name="router2" signature="Ledu/cst316/gompersacousticsystem/simulation/Router;" isStatic="true">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+    </Field>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" start="22" end="22" startBytecode="9" endBytecode="9" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" name="&lt;init&gt;" signature="(Ledu/cst316/gompersacousticsystem/simulation/Router;Ledu/cst316/gompersacousticsystem/simulation/Router;Ledu/cst316/gompersacousticsystem/simulation/Router;)V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" start="20" end="32" startBytecode="0" endBytecode="182" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+    </Method>
+    <Field classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" name="router3" signature="Ledu/cst316/gompersacousticsystem/simulation/Router;" isStatic="true">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+    </Field>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" start="23" end="23" startBytecode="13" endBytecode="13" sourcefile="RouterTrilateration.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/RouterTrilateration.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.simulation.TrilaterationSimulation">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.TrilaterationSimulation" sourcefile="TrilaterationSimulation.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/TrilaterationSimulation.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.simulation.TrilaterationSimulation" name="main" signature="()V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.TrilaterationSimulation" start="40" end="78" startBytecode="0" endBytecode="136" sourcefile="TrilaterationSimulation.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/TrilaterationSimulation.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="8" end="8" startBytecode="0" endBytecode="65" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.TrilaterationSimulation" start="40" end="40" startBytecode="7" endBytecode="7" sourcefile="TrilaterationSimulation.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/TrilaterationSimulation.java"/>
+  </BugInstance>
+  <BugInstance type="IL_INFINITE_LOOP" priority="1" abbrev="IL" category="CORRECTNESS" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.simulation.TrilaterationSimulation">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.TrilaterationSimulation" sourcefile="TrilaterationSimulation.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/TrilaterationSimulation.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.simulation.TrilaterationSimulation" name="main" signature="()V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.TrilaterationSimulation" start="40" end="78" startBytecode="0" endBytecode="136" sourcefile="TrilaterationSimulation.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/TrilaterationSimulation.java"/>
+    </Method>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.TrilaterationSimulation" start="50" end="50" startBytecode="29" endBytecode="29" sourcefile="TrilaterationSimulation.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/TrilaterationSimulation.java"/>
+    <LocalVariable name="userChoice" register="4" pc="29" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="IL_INFINITE_LOOP" priority="1" abbrev="IL" category="CORRECTNESS" first="1">
+    <Class classname="edu.cst316.gompersacousticsystem.simulation.UserLocation">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.UserLocation" sourcefile="UserLocation.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/UserLocation.java"/>
+    </Class>
+    <Method classname="edu.cst316.gompersacousticsystem.simulation.UserLocation" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.UserLocation" start="18" end="26" startBytecode="0" endBytecode="140" sourcefile="UserLocation.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/UserLocation.java"/>
+    </Method>
+    <SourceLine classname="edu.cst316.gompersacousticsystem.simulation.UserLocation" start="20" end="20" startBytecode="42" endBytecode="42" sourcefile="UserLocation.java" sourcepath="edu/cst316/gompersacousticsystem/simulation/UserLocation.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 30 Apr 2013 22:51:19 -0700" total_classes="49" referenced_classes="191" total_bugs="12" total_size="1346" num_packages="3" vm_version="23.6-b04" cpu_seconds="83.62" clock_seconds="1038.14" peak_mbytes="362.68" alloc_mbytes="494.94" gc_seconds="9.43" priority_1="12">
+    <PackageStats package="edu.cst316.gompersacousticsystem" total_bugs="6" total_types="36" total_size="976" priority_1="6">
+      <ClassStats class="edu.cst316.gompersacousticsystem.Area" sourceFile="Area.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.BuildConfig" sourceFile="BuildConfig.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.DijkstraAlgorithm" sourceFile="DijkstraAlgorithm.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.DijkstraManagerASU" sourceFile="DijkstraManagerASU.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.DijkstraManagerASU$1" sourceFile="DijkstraManagerASU.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.Directory" sourceFile="Directory.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.Draw" sourceFile="Draw.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.Edge" sourceFile="Edge.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.GestureActivity" sourceFile="GestureActivity.java" interface="false" size="47" bugs="1" priority_1="1"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.GestureActivity$1" sourceFile="GestureActivity.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.Graph" sourceFile="Graph.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.GraphFactory" sourceFile="GraphFactory.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.MainActivity" sourceFile="MainActivity.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.MainActivity$1" sourceFile="MainActivity.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.MainActivity$2" sourceFile="MainActivity.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.Map" sourceFile="Map.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.Node" sourceFile="Node.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.Point" sourceFile="Point.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.R" sourceFile="R.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.R$attr" sourceFile="R.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.R$color" sourceFile="R.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.R$drawable" sourceFile="R.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.R$id" sourceFile="R.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.R$layout" sourceFile="R.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.R$raw" sourceFile="R.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.R$string" sourceFile="R.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.R$style" sourceFile="R.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.R$styleable" sourceFile="R.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.Router" sourceFile="Router.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.RouterTrilateration" sourceFile="RouterTrilateration.java" interface="false" size="78" bugs="3" priority_1="3"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.RouterTrilaterationTest" sourceFile="RouterTrilaterationTest.java" interface="false" size="21" bugs="1" priority_1="1"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.Signal" sourceFile="Signal.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.Trilateration" sourceFile="Trilateration.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.UserLocation" sourceFile="UserLocation.java" interface="false" size="19" bugs="1" priority_1="1"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.Vertex" sourceFile="Vertex.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.graphFactoryASU" sourceFile="graphFactoryASU.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.cst316.gompersacousticsystem.simulation" total_bugs="6" total_types="7" total_size="234" priority_1="6">
+      <ClassStats class="edu.cst316.gompersacousticsystem.simulation.Directory" sourceFile="Directory.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.simulation.Node" sourceFile="Node.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.simulation.Router" sourceFile="Router.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.simulation.RouterTrilateration" sourceFile="RouterTrilateration.java" interface="false" size="82" bugs="3" priority_1="3"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.simulation.Signal" sourceFile="Signal.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.simulation.TrilaterationSimulation" sourceFile="TrilaterationSimulation.java" interface="false" size="29" bugs="2" priority_1="2"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.simulation.UserLocation" sourceFile="UserLocation.java" interface="false" size="9" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="edu.cst316.gompersacousticsystem.util" total_bugs="0" total_types="6" total_size="136">
+      <ClassStats class="edu.cst316.gompersacousticsystem.util.SystemUiHider" sourceFile="SystemUiHider.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.util.SystemUiHider$1" sourceFile="SystemUiHider.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.util.SystemUiHider$OnVisibilityChangeListener" sourceFile="SystemUiHider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.util.SystemUiHiderBase" sourceFile="SystemUiHiderBase.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.util.SystemUiHiderHoneycomb" sourceFile="SystemUiHiderHoneycomb.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="edu.cst316.gompersacousticsystem.util.SystemUiHiderHoneycomb$1" sourceFile="SystemUiHiderHoneycomb.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="243" invocations="394" avgMicrosecondsPerInvocation="617" maxMicrosecondsPerInvocation="49941" standardDeviationMircosecondsPerInvocation="2723"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="202" invocations="497" avgMicrosecondsPerInvocation="406" maxMicrosecondsPerInvocation="21442" standardDeviationMircosecondsPerInvocation="1134"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="177" invocations="2" avgMicrosecondsPerInvocation="88721" maxMicrosecondsPerInvocation="105951" standardDeviationMircosecondsPerInvocation="17232"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="170" invocations="396" avgMicrosecondsPerInvocation="431" maxMicrosecondsPerInvocation="7871" standardDeviationMircosecondsPerInvocation="882"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="170" invocations="394" avgMicrosecondsPerInvocation="433" maxMicrosecondsPerInvocation="39805" standardDeviationMircosecondsPerInvocation="2081"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="160" invocations="511" avgMicrosecondsPerInvocation="314" maxMicrosecondsPerInvocation="2636" standardDeviationMircosecondsPerInvocation="251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="144" invocations="396" avgMicrosecondsPerInvocation="365" maxMicrosecondsPerInvocation="5804" standardDeviationMircosecondsPerInvocation="686"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckCalls" totalMilliseconds="112" invocations="49" avgMicrosecondsPerInvocation="2285" maxMicrosecondsPerInvocation="9776" standardDeviationMircosecondsPerInvocation="2766"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="107" invocations="197" avgMicrosecondsPerInvocation="548" maxMicrosecondsPerInvocation="8967" standardDeviationMircosecondsPerInvocation="1005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="59" invocations="191" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="6978" standardDeviationMircosecondsPerInvocation="742"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="58" invocations="6363" avgMicrosecondsPerInvocation="9" maxMicrosecondsPerInvocation="41417" standardDeviationMircosecondsPerInvocation="519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="57" invocations="131" avgMicrosecondsPerInvocation="437" maxMicrosecondsPerInvocation="4471" standardDeviationMircosecondsPerInvocation="710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="56" invocations="197" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="2853" standardDeviationMircosecondsPerInvocation="484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="50" invocations="191" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="8248" standardDeviationMircosecondsPerInvocation="691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="36" invocations="399" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="591" standardDeviationMircosecondsPerInvocation="90"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="32" invocations="197" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="4003" standardDeviationMircosecondsPerInvocation="369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.Noise" totalMilliseconds="31" invocations="49" avgMicrosecondsPerInvocation="646" maxMicrosecondsPerInvocation="2517" standardDeviationMircosecondsPerInvocation="628"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="30" invocations="49" avgMicrosecondsPerInvocation="619" maxMicrosecondsPerInvocation="2653" standardDeviationMircosecondsPerInvocation="620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="29" invocations="191" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="4443" standardDeviationMircosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="27" invocations="328" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="1048" standardDeviationMircosecondsPerInvocation="105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="24" invocations="191" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="1769" standardDeviationMircosecondsPerInvocation="325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="23" invocations="212" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="1252" standardDeviationMircosecondsPerInvocation="164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="21" invocations="49" avgMicrosecondsPerInvocation="442" maxMicrosecondsPerInvocation="1647" standardDeviationMircosecondsPerInvocation="443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="21" invocations="49" avgMicrosecondsPerInvocation="439" maxMicrosecondsPerInvocation="2763" standardDeviationMircosecondsPerInvocation="562"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="21" invocations="191" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="1850" standardDeviationMircosecondsPerInvocation="230"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="19" invocations="49" avgMicrosecondsPerInvocation="403" maxMicrosecondsPerInvocation="1961" standardDeviationMircosecondsPerInvocation="436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="19" invocations="192" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="1854" standardDeviationMircosecondsPerInvocation="183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="19" invocations="49" avgMicrosecondsPerInvocation="398" maxMicrosecondsPerInvocation="1927" standardDeviationMircosecondsPerInvocation="488"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="19" invocations="49" avgMicrosecondsPerInvocation="396" maxMicrosecondsPerInvocation="2494" standardDeviationMircosecondsPerInvocation="464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="19" invocations="1762" avgMicrosecondsPerInvocation="10" maxMicrosecondsPerInvocation="295" standardDeviationMircosecondsPerInvocation="23"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="18" invocations="49" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="1691" standardDeviationMircosecondsPerInvocation="403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="17" invocations="197" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="1290" standardDeviationMircosecondsPerInvocation="177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="16" invocations="49" avgMicrosecondsPerInvocation="342" maxMicrosecondsPerInvocation="2184" standardDeviationMircosecondsPerInvocation="399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="15" invocations="49" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="3213" standardDeviationMircosecondsPerInvocation="493"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1367388944836" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>
