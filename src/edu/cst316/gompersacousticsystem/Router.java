@@ -46,8 +46,13 @@ public class Router {
 		results = signalStrength.getWifiLevels();
 		int i = 0;
 		for (i = 0; i < results.size() && !results.get(i).SSID.equals(SSID); i++) {
+			
+			setLevel(Integer.valueOf(results.get(i).level));
+			if (Integer.valueOf(results.get(i).level) < 0){
+				System.exit(1);
 			}
-		setLevel(Integer.valueOf(results.get(i).level));
+		}
+		
 		
 		System.out.println(getSSID() + " " + getLevel());
 	}

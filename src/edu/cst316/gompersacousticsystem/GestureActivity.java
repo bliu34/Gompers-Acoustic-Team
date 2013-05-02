@@ -55,8 +55,16 @@ public class GestureActivity extends Activity {
         r1 = new Router("dlink", signalStrength);
         r2 = new Router("myqwest3331", signalStrength);
         r3 = new Router("belkin-router", signalStrength);
+
+        if(r1.getLevel() <= 0 || r2.getLevel() <= 0 || r3.getLevel() <= 0){
+        	
+        	System.out.println("Insufficient levels for user tracking.");
+        	System.exit(1);
+        }
         new RouterTrilateration(r1, r2, r3);
         RouterTrilateration.setLocation();
+        
+        
     }
     
     @Override
