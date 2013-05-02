@@ -40,40 +40,44 @@ public class TrilaterationSimulation {
 		Scanner scanner = new Scanner(System.in);
 		
 		String currentLocation;
-		String destination;
-		
-		
+		String destination = null;
 		
 		System.out.println("User, where would you like to go?");
 		String userChoice = scanner.next(); 
-		
-		while (userChoice != "Exit"){
-			
+
 			if (userChoice == "Offices"){
 				
-				
+				destination = "Offices";
 			}
 			
-			if (userChoice == "Restrooms"){
+			else if (userChoice == "Restrooms"){
 				
-				
+				destination = "Restrooms";
 			}
 			
-			if (userChoice == "Cafeteria"){
+			else if (userChoice == "Cafeteria"){
 				
-				
+				destination = "Cafeteria";
 			}
 			
-			if (userChoice == "Front Doors"){
+			else if (userChoice == "Front Doors"){
 				
-				
+				destination = "Front Doors";
 			}
 			
-			if (userChoice == "Home"){
+			else if (userChoice == "Home"){
 				
-				
+				destination = "Home";
 			}
-		}
+			
+			else{
+				
+				System.out.println("Please enter an acceptable destination.");
+				userChoice = scanner.next(); 
+			}
+			
+			System.out.println("Now taking you to " + destination);
+		
 		
 	}
 	

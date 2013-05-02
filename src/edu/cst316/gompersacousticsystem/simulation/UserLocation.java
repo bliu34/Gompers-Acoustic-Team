@@ -13,16 +13,36 @@ public class UserLocation {
 	//Router router3 = new Router("belkin-router");
 	//RouterTrilateration trilateration = new RouterTrilateration(router1, router2, router3);
 
-	boolean tracking = true;
+	boolean tracking;
+	int trackingValue = 0;
 
-	public UserLocation() {
-
-		while (tracking = true) {
-
-			int currentlocation = 0; //location.MyTrilateration();
-			System.out.println("You're current location is" + currentlocation);
+public UserLocation(boolean tracking) {
+		
+		this.tracking = tracking;
+		
+	}
+	
+	public int returnTracking(boolean tracking){
+		
+		this.tracking = tracking;
+		
+		if (tracking == true) {
+			
+			trackingValue = 1;
+			System.out.println("Tracking current location.");
+			
+		}
+		
+		else if(tracking == false){
+			trackingValue = 0;
+			System.out.println("Unable to track location.");
 		}
 
+		
+		return trackingValue;
 	}
 
+
 }
+
+

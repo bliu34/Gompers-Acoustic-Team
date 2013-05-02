@@ -10,14 +10,24 @@ public class UserLocation {
 	Router router2 = new Router("dlink", signalStrength);
 	Router router3 = new Router("belkin-router", signalStrength);
 	RouterTrilateration trilateration = new RouterTrilateration(router1, router2, router3);
-boolean tracking = true;
+	boolean tracking;
 
 	public UserLocation() {
-
-		while (tracking = true) {
-
-			int currentlocation = 0; //location.MyTrilateration();
-			System.out.println("You're current location is" + currentlocation);
+		
+	}
+	
+	public void setTrackingMessage(boolean tracking){
+		
+		this.tracking = tracking;
+		
+		if (tracking == true) {
+			
+			System.out.println("Tracking current location.");
+			
+		}
+		
+		else if(tracking == false){
+			System.out.println("Unable to track location.");
 		}
 
 	}

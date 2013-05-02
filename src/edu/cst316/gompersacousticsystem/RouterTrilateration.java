@@ -90,7 +90,7 @@ public class RouterTrilateration {
 		 
 		 
 		//myRotation used for fixing point of location
-		 static double[] myRotation(double x, double y, double dist, double deg) {
+		  static double[] myRotation(double x, double y, double dist, double deg) {
 			 
 			 double tmpX, tmpY;
 			 //Initialize empty array for temp coordinates
@@ -107,7 +107,7 @@ public class RouterTrilateration {
 			 return myLocation;
 		 }
 			 
-		   public static double[] MyTrilateration(){
+		   public static  double[] MyTrilateration(){
 			 //Technical Standard used for accessing info through the internet.
 			 //Temporary array for storing coordinates for actual user location
 			   
