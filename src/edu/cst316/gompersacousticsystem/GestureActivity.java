@@ -2,7 +2,6 @@ package edu.cst316.gompersacousticsystem;
 
 import java.util.ArrayList;
 
-import edu.cst316.gompersacousticsystem.*;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
@@ -33,20 +32,23 @@ public class GestureActivity extends Activity {
         GestureActivity.context = getApplicationContext();
         setContentView(R.layout.main);
         gestureEvent = (TextView)findViewById(R.id.GestureEvent);
+        
         ArrayList<Vertex> oh = new ArrayList<Vertex>();
+        
         Vertex a = new Vertex("a","a", new Area(new Point(0.0,0.0), new Point(2.0, 2.0)));
         Vertex b = new Vertex("b","b", new Area(new Point(18.0,0.0), new Point(20.0, 2.0)));
         Vertex c = new Vertex("c","c", new Area(new Point(18.0,18.0), new Point(20.0, 20.0)));
         Vertex d = new Vertex("d","d", new Area(new Point(0.0,18.0), new Point(2.0, 20.0)));
+        
         oh.add(a);
         oh.add(b);
         oh.add(c);
         oh.add(d);
         
-        ArrayList<Edge> ah = new ArrayList<Edge>();
-        ah.add(new Edge("a", a, b, 1));
-        ah.add(new Edge("b", b, c, 1));
-        ah.add(new Edge("c",c,d,1));
+        ArrayList<Edge> arrlist = new ArrayList<Edge>();
+        arrlist.add(new Edge("a", a, b, 1));
+        arrlist.add(new Edge("b", b, c, 1));
+        arrlist.add(new Edge("c", c, d, 1));
         
         Graph darn = (new graphFactoryASU()).getGraph();
         myManager = new DijkstraManagerASU((new graphFactoryASU()).getGraph());
@@ -77,17 +79,12 @@ public class GestureActivity extends Activity {
 
 	@Override
 	public boolean onDoubleTap(MotionEvent e) {
-	// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-	// TODO Auto-generated method stub
 		System.out.println("DEBUGGING");
-		//r1.update();
-		//r2.update();
-		//r3.update();
 		walkin();
 		return super.onFling(e1, e2, velocityX, velocityY);
 	}
@@ -115,11 +112,13 @@ public class GestureActivity extends Activity {
 		ArrayList<Vertex> path = myManager.generatePath();
 		directions.add("FORWARD");
 		System.out.println(path.toString());
+		
 		for(int i = 1; i < path.size(); i++ )
 			directions.add(path.get(i).whereToTurn(path.get(i-1)));
 		
 		System.out.println(directions.toString());
 		myManager.playSound(8);
+		
 		while(true){
 			r1.update();
 			r2.update();
@@ -130,7 +129,6 @@ public class GestureActivity extends Activity {
 			currentPoint = new Point(giveMeThat[0], giveMeThat[1]);
 			boolean haveWeMoved = myManager.changeUserPosition(currentPoint);
 			if(haveWeMoved){
-				//myManager.playSound(7);
 			
 			for(int i=0; i < directions.size(); i++){
 				
@@ -157,7 +155,8 @@ public class GestureActivity extends Activity {
 
 	};
     
-    GestureDetector gestureDetector = new GestureDetector(simpleOnGestureListener);
+    @SuppressWarnings("deprecation")
+	GestureDetector gestureDetector = new GestureDetector(simpleOnGestureListener);
 
 	public static Context getContext() {
 		return GestureActivity.context;
