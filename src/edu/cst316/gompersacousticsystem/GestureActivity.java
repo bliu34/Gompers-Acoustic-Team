@@ -85,7 +85,7 @@ public class GestureActivity extends Activity {
 	@Override
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
 		System.out.println("DEBUGGING");
-		walkin();
+		walkLoop();
 		return super.onFling(e1, e2, velocityX, velocityY);
 	}
 
@@ -102,13 +102,13 @@ public class GestureActivity extends Activity {
 		return super.onSingleTapConfirmed(e);
 	}
 	
-	public void walkin()
+	public void walkLoop()
 	{
 		Point currentPoint;
-		double[] giveMeThat = new double[2];
+		double[] trilateratedCoordinates = new double[2];
 		ArrayList<String> directions = new ArrayList<String>();
 		Signal ourSignal = new Signal(GestureActivity.getContext());
-		ArrayList<ScanResult> scanResulsts;
+		ArrayList<ScanResult> scanResults;
 		ArrayList<Vertex> path = myManager.generatePath();
 		directions.add("FORWARD");
 		System.out.println(path.toString());
@@ -123,10 +123,10 @@ public class GestureActivity extends Activity {
 			r1.update();
 			r2.update();
 			r3.update();
-			scanResulsts = (ArrayList<ScanResult>)ourSignal.getWifiLevels();
+			scanResults = (ArrayList<ScanResult>)ourSignal.getWifiLevels();
 			//giveMeThat = RouterTrilateration.MyTrilateration(0.0,0.0, (double)scanResulsts.get(0).level, 10.0, 20.0, (double)scanResulsts.get(1).level, 20.0, 0.0, (double)scanResulsts.get(2).level);
-			giveMeThat = rt.MyTrilateration();
-			currentPoint = new Point(giveMeThat[0], giveMeThat[1]);
+			trilateratedCoordinates = RouterTrilateration.MyTrilateration();
+			currentPoint = new Point(trilateratedCoordinates[0], trilateratedCoordinates[1]);
 			boolean haveWeMoved = myManager.changeUserPosition(currentPoint);
 			if(haveWeMoved){
 			
@@ -145,7 +145,6 @@ public class GestureActivity extends Activity {
 				}
 				
 				else if(directions.get(i) == "REVERSE"){
-					myManager.playSound(6);
 					myManager.playSound(6);
 				}
 			}
