@@ -32,7 +32,7 @@ public class GestureActivity extends Activity {
         GestureActivity.context = getApplicationContext();
         setContentView(R.layout.main);
         gestureEvent = (TextView)findViewById(R.id.GestureEvent);
-        myManager = new DijkstraManagerASU((new graphFactoryASU()).getGraph());
+        myManager = new DijkstraManagerASU();
         
         Signal signalStrength = new Signal(getContext());
         r1 = new Router("dlink", signalStrength);
@@ -66,7 +66,7 @@ public class GestureActivity extends Activity {
 	@Override
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
 		System.out.println("DEBUGGING");
-		walkLoop();
+		myManager.walkLoop();
 		return super.onFling(e1, e2, velocityX, velocityY);
 	}
 
@@ -83,55 +83,7 @@ public class GestureActivity extends Activity {
 		return super.onSingleTapConfirmed(e);
 	}
 	
-	public void walkLoop()
-	{
-		Point currentPoint;
-		double[] trilateratedCoordinates = new double[2];
-		ArrayList<String> directions = new ArrayList<String>();
-		Signal ourSignal = new Signal(GestureActivity.getContext());
-		ArrayList<ScanResult> scanResults;
-		ArrayList<Vertex> path = myManager.generatePath();
-		directions.add("FORWARD");
-		System.out.println(path.toString());
-		
-		for(int i = 1; i < path.size(); i++ )
-			directions.add(path.get(i).whereToTurn(path.get(i-1)));
-		
-		System.out.println(directions.toString());
-		myManager.playSound(8);
-		
-		while(true){
-			r1.update();
-			r2.update();
-			r3.update();
-			scanResults = (ArrayList<ScanResult>)ourSignal.getWifiLevels();
-			//giveMeThat = RouterTrilateration.MyTrilateration(0.0,0.0, (double)scanResulsts.get(0).level, 10.0, 20.0, (double)scanResulsts.get(1).level, 20.0, 0.0, (double)scanResulsts.get(2).level);
-			trilateratedCoordinates = RouterTrilateration.MyTrilateration();
-			currentPoint = new Point(trilateratedCoordinates[0], trilateratedCoordinates[1]);
-			boolean haveWeMoved = myManager.changeUserPosition(currentPoint);
-			if(haveWeMoved){
-			
-			for(int i=0; i < directions.size(); i++){
-				
-				if (directions.get(i) == "RIGHT"){
-					myManager.playSound(7);
-				}
-				
-				else if(directions.get(i) == "LEFT"){
-					myManager.playSound(6);
-				}
-				
-				else if(directions.get(i) == "FORWARD"){
-					myManager.playSound(8);
-				}
-				
-				else if(directions.get(i) == "REVERSE"){
-					myManager.playSound(6);
-				}
-			}
-			}
-		}
-	}
+	
 
 	};
     

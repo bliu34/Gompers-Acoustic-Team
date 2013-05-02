@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
-import android.view.View;
 
 public class DijkstraManagerASU {
 	private DijkstraAlgorithm myDa;
@@ -12,7 +11,8 @@ public class DijkstraManagerASU {
 	private int curSelectedVertex;
 	private ArrayList<Vertex> vertexes;
 
-	public DijkstraManagerASU(Graph graph) {
+	public DijkstraManagerASU() {
+		Graph graph = (new graphFactoryASU()).getGraph();
 		myDa = new DijkstraAlgorithm(graph);
 		vertexes = (ArrayList<Vertex>) graph.getVertexes();
 		latestUserVertex = 4;
@@ -71,7 +71,49 @@ public class DijkstraManagerASU {
 
 		return changed;
 	}
-
+	public void walkLoop()
+	{
+		Point currentPoint;
+		double[] trilateratedCoordinates = new double[2];
+		ArrayList<String> directions = new ArrayList<String>();
+		ArrayList<Vertex> path = generatePath();
+		directions.add("FORWARD");
+		System.out.println(path.toString());
+		
+		for(int i = 1; i < path.size(); i++ )
+			directions.add(path.get(i).whereToTurn(path.get(i-1)));
+		
+		System.out.println(directions.toString());
+		playSound(8);
+		
+		while(true){
+			//giveMeThat = RouterTrilateration.MyTrilateration(0.0,0.0, (double)scanResulsts.get(0).level, 10.0, 20.0, (double)scanResulsts.get(1).level, 20.0, 0.0, (double)scanResulsts.get(2).level);
+			trilateratedCoordinates = RouterTrilateration.MyTrilateration();
+			currentPoint = new Point(trilateratedCoordinates[0], trilateratedCoordinates[1]);
+			boolean haveWeMoved = changeUserPosition(currentPoint);
+			if(haveWeMoved){
+			
+			for(int i=0; i < directions.size(); i++){
+				
+				if (directions.get(i) == "RIGHT"){
+					playSound(7);
+				}
+				
+				else if(directions.get(i) == "LEFT"){
+					playSound(6);
+				}
+				
+				else if(directions.get(i) == "FORWARD"){
+					playSound(8);
+				}
+				
+				else if(directions.get(i) == "REVERSE"){
+					playSound(6);
+				}
+			}
+			}
+		}
+	}
 	public void playSound(int i) {
 		int soundID = 0;
 		switch (i) {
