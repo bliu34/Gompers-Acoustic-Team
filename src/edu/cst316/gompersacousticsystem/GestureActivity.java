@@ -32,25 +32,6 @@ public class GestureActivity extends Activity {
         GestureActivity.context = getApplicationContext();
         setContentView(R.layout.main);
         gestureEvent = (TextView)findViewById(R.id.GestureEvent);
-        
-        ArrayList<Vertex> oh = new ArrayList<Vertex>();
-        
-        Vertex a = new Vertex("a","a", new Area(new Point(0.0,0.0), new Point(2.0, 2.0)));
-        Vertex b = new Vertex("b","b", new Area(new Point(18.0,0.0), new Point(20.0, 2.0)));
-        Vertex c = new Vertex("c","c", new Area(new Point(18.0,18.0), new Point(20.0, 20.0)));
-        Vertex d = new Vertex("d","d", new Area(new Point(0.0,18.0), new Point(2.0, 20.0)));
-        
-        oh.add(a);
-        oh.add(b);
-        oh.add(c);
-        oh.add(d);
-        
-        ArrayList<Edge> arrlist = new ArrayList<Edge>();
-        arrlist.add(new Edge("a", a, b, 1));
-        arrlist.add(new Edge("b", b, c, 1));
-        arrlist.add(new Edge("c", c, d, 1));
-        
-        Graph darn = (new graphFactoryASU()).getGraph();
         myManager = new DijkstraManagerASU((new graphFactoryASU()).getGraph());
         
         Signal signalStrength = new Signal(getContext());
